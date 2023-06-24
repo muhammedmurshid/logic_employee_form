@@ -9,6 +9,7 @@
         </record>
     </data>
     <template id="employee_joining_form">
+        <title>Joining form</title>
         <t t-call="website.layout">
             <script type="text/javascript" src="refund_logic/static/src/js/submitt_button.js"/>
             <div id="wrap">
