@@ -22,10 +22,10 @@ class EmployeeModuleForm(models.Model):
     pf_uan_number = fields.Char(string='PF UAN Number')
     esi_ip_number = fields.Char(string='ESI IP Number')
     blood_group = fields.Char(string='Blood Group')
-    employee_name = fields.Char(string='Employee Name', required=True)
-    designation = fields.Char(string='Designation', required=True)
+    employee_name = fields.Char(string='Employee Name')
+    designation = fields.Char(string='Designation')
     date_of_joining = fields.Date(string='Date Of Joining')
-    date_of_birth = fields.Date(string='Date Of Birth', required=True)
+    date_of_birth = fields.Date(string='Date Of Birth')
     mail_id = fields.Char(string='Email')
     phone_number = fields.Char(string='Phone Number')
     marital_stats = fields.Char(string='Marital Status')
@@ -37,6 +37,7 @@ class EmployeeModuleForm(models.Model):
         ('cancel', 'Cancelled'),
     ], string='Status', required=True, readonly=True, copy=False,
         tracking=True, default='draft')
+    upload_cv = fields.Binary(string='Upload CV')
 
     def confirm_employee_request(self):
         print("hr_approval")

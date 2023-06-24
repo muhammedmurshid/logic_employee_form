@@ -8,13 +8,13 @@
             <field name="sequence">55</field>
         </record>
     </data>
-    <template id="online_appointment_form">
+    <template id="employee_joining_form">
         <t t-call="website.layout">
             <script type="text/javascript" src="refund_logic/static/src/js/submitt_button.js"/>
             <div id="wrap">
                 <div class="container">
                     <div class="col-md-12">
-                        <form action="/employee_form/submit" method="post">
+                        <form action="/employee_form/submit" method="post" enctype="multipart/form-data">
                             <br></br>
                             <h3 align="center">Employee Form</h3>
                             <br></br>
@@ -473,6 +473,24 @@
                                                     <input id="name_as_per_aadhar" type="char"
                                                            class="form-control s_website_form_input"
                                                            name="name_as_per_aadhar"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                      <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Upload Your CV:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="cv" type="file"
+                                                           class="form-control s_website_form_input"
+                                                           name="cv"/>
                                                 </div>
                                             </div>
                                         </div>

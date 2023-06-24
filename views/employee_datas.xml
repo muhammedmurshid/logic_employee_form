@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="hr.view_employee_form"/>
         <field name="arch" type="xml">
             <notebook>
-                <page string="Staff Information">
+                <page string="Staff Information" name="staff_information">
                     <group>
                         <group>
                             <field name="pf_uan_number" placeholder="If Any In Previous Employment"/>
@@ -36,6 +36,7 @@
                 <field name="children_name" attrs="{'invisible': [('marital', '!=', 'married')]}"/>
                 <field name="children_birthdate" attrs="{'invisible': [('marital', '!=', 'married')]}"/>
             </xpath>
+
         </field>
     </record>
 </odoo>

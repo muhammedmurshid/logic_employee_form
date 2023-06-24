@@ -21,3 +21,4 @@ class LogicStaffInformation(models.Model):
     blood_group = fields.Char(string='Blood Group')
     home_address = fields.Text(string='Address')
 
+
