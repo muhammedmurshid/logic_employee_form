@@ -5,8 +5,8 @@
     'depends': ['base', 'website', 'hr', 'mail'],
     'data': [
         'data/activity.xml',
-        'security/ir.model.access.csv',
         'security/security.xml',
+        'security/ir.model.access.csv',
         'views/web_form_view.xml',
         'views/employee_datas.xml',
         'views/employee_form_module.xml'
