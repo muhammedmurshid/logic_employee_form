@@ -29,6 +29,13 @@
                             <field name="pan_card_number"/>
                             <field name="name_as_per_pan"/>
                         </group>
+                        <group string="Documents" name="documents">
+                            <field name="upload_cv"/>
+                            <field name="aadhar_photo"/>
+                            <field name="pan_photo"/>
+                            <field name="bank_passbook"/>
+                            <field name="photo"/>
+                        </group>
                     </group>
                 </page>
             </notebook>

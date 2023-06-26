@@ -109,7 +109,14 @@ class EmployeeModuleForm(models.Model):
                 'spouse_birthdate': self.spouse_dob,
                 'spouse_complete_name': self.spouse_name,
                 'children_name': self.name_of_children,
-                'fam_ids': abc
+                'fam_ids': abc,
+                'upload_cv': self.upload_cv,
+                'aadhar_photo': self.aadhar_photo,
+                'pan_photo': self.pan_photo,
+                'bank_passbook': self.bank_passbook,
+                'photo': self.photo,
+                'private_email': self.mail_id,
+                'work_phone': self.office_phone
 
 
             }
@@ -139,6 +146,13 @@ class EmployeeModuleForm(models.Model):
                 'fam_ids': abc,
                 'spouse_complete_name': self.spouse_name,
                 'children_name': self.name_of_children,
+                'upload_cv': self.upload_cv,
+                'aadhar_photo': self.aadhar_photo,
+                'pan_photo': self.pan_photo,
+                'bank_passbook': self.bank_passbook,
+                'photo': self.photo,
+                'private_email': self.mail_id,
+                'work_phone': self.office_phone
 
             }
             )

@@ -20,6 +20,11 @@ class LogicStaffInformation(models.Model):
     esi_ip_number = fields.Char(string='ESI IP Number')
     blood_group = fields.Char(string='Blood Group')
     home_address = fields.Text(string='Address')
+    upload_cv = fields.Binary(string='Upload CV')
+    aadhar_photo = fields.Binary(string='Aadhar Card Photo')
+    pan_photo = fields.Binary(string='Pan Card Photo')
+    bank_passbook = fields.Binary(string='Bank Passbook')
+    photo = fields.Binary(string='Photo')
 
 
 # class Attachment(models.Model):
