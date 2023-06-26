@@ -1,4 +1,6 @@
 from odoo import fields, models, _
+import io
+import cairosvg
 
 
 class EmployeeModuleForm(models.Model):
@@ -27,9 +29,18 @@ class EmployeeModuleForm(models.Model):
     date_of_joining = fields.Date(string='Date Of Joining')
     date_of_birth = fields.Date(string='Date Of Birth')
     mail_id = fields.Char(string='Email')
-    phone_number = fields.Char(string='Phone Number')
+    phone_number = fields.Char(string='Personal Phone Number')
+    office_phone = fields.Char(string='Office Phone Number')
+    office_mail = fields.Char(string='Office Email')
+    father_name = fields.Char(string='Father Name')
+    mother_name = fields.Char(string='Mother Name')
+    mother_dob = fields.Date(string='Mother Date Of Birth')
+    father_dob = fields.Date(string='Father Date Of Birth')
+    spouse_dob = fields.Date(string='Spouse Date Of Birth')
     marital_stats = fields.Char(string='Marital Status')
     address = fields.Text(string='Address')
+    fath_rel = fields.Char(string='Father Relation')
+    moth_rel = fields.Char(string='Mother Relation')
     state = fields.Selection(selection=[
         ('draft', 'Draft'),
         ('confirm', 'Confirmed'),
@@ -38,6 +49,10 @@ class EmployeeModuleForm(models.Model):
     ], string='Status', required=True, readonly=True, copy=False,
         tracking=True, default='draft')
     upload_cv = fields.Binary(string='Upload CV')
+    aadhar_photo = fields.Binary(string='Aadhar Card Photo')
+    pan_photo = fields.Binary(string='Pan Card Photo')
+    bank_passbook = fields.Binary(string='Bank Passbook')
+    photo = fields.Binary(string='Photo')
 
     def confirm_employee_request(self):
         print("hr_approval")
@@ -48,6 +63,25 @@ class EmployeeModuleForm(models.Model):
         self.state = 'cancel'
 
     def confirm_technical_officer(self):
+        abc = []
+        for rec in self:
+            res_list = {
+                'member_name': rec.father_name,
+                # 'relation_id': 'father',
+                # 'classroom_id': self.class_room.name,
+                'birth_date': rec.father_dob,
+
+
+            }
+            res_list_mom = {
+                'member_name': rec.mother_name,
+                # 'relation_id': 'mother',
+                # 'classroom_id': self.class_room.name,
+                'birth_date': rec.mother_dob,
+
+            }
+            abc.append((0, 0, res_list))
+            abc.append((0, 0, res_list_mom))
 
         if self.marital_stats == 'married':
             self.env['hr.employee'].create({
@@ -58,7 +92,7 @@ class EmployeeModuleForm(models.Model):
                 'mobile_phone': self.phone_number,
                 'home_address': self.address,
                 'birthday': self.date_of_birth,
-                'joining_date': self.date_of_joining,
+                'joining_date_cus': self.date_of_joining,
                 'bank_name': self.bank_name,
                 'bank_acc_number': self.bank_acc_number,
                 'branch_bank': self.branch_bank,
@@ -72,9 +106,11 @@ class EmployeeModuleForm(models.Model):
                 'pf_uan_number': self.pf_uan_number,
                 'esi_ip_number': self.esi_ip_number,
                 'blood_group': self.blood_group,
-
+                'spouse_birthdate': self.spouse_dob,
                 'spouse_complete_name': self.spouse_name,
                 'children_name': self.name_of_children,
+                'fam_ids': abc
+
 
             }
             )
@@ -100,7 +136,7 @@ class EmployeeModuleForm(models.Model):
                 'pf_uan_number': self.pf_uan_number,
                 'esi_ip_number': self.esi_ip_number,
                 'blood_group': self.blood_group,
-
+                'fam_ids': abc,
                 'spouse_complete_name': self.spouse_name,
                 'children_name': self.name_of_children,
 

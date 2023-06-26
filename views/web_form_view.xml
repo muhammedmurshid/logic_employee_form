@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
-        <record id="menu_appointment" model="website.menu">
-            <field name="name">Employee Form</field>
-            <field name="url">/employee_form</field>
-            <field name="parent_id" ref="website.main_menu"/>
-            <field name="sequence">55</field>
-        </record>
+<!--        <record id="menu_appointment" model="website.menu">-->
+<!--            <field name="name">Employee Form</field>-->
+<!--            <field name="url">/employee_form</field>-->
+<!--            <field name="parent_id" ref="website.main_menu"/>-->
+<!--            <field name="sequence">55</field>-->
+<!--        </record>-->
     </data>
     <template id="employee_joining_form">
         <title>Joining form</title>
@@ -15,9 +15,10 @@
             <div id="wrap">
                 <div class="container">
                     <div class="col-md-12">
-                        <form action="/employee_form/submit" method="post" enctype="multipart/form-data">
+                        <form action="/employee_form/submit" method="post" enctype="multipart/form-data"
+                              class="oe_import">
                             <br></br>
-                            <h3 align="center">Employee Form</h3>
+                            <h3 align="center">Joining Form</h3>
                             <br></br>
                             <div class="row">
                                 <div class="col-md-6">
@@ -50,7 +51,7 @@
                                                 <label class="col-form-label col-sm-auto s_website_form_label"
                                                        style="width: 200px">
                                                     <span class="s_website_form_label_content">
-                                                        Phone Number:
+                                                        Personal Number:
                                                     </span>
                                                     <span class="s_website_form_mark">
                                                         *
@@ -71,9 +72,31 @@
                                                 <label class="col-form-label col-sm-auto s_website_form_label"
                                                        style="width: 200px">
                                                     <span class="s_website_form_label_content">
-                                                        Designation:
+                                                        Office Number:
                                                     </span>
                                                 </label>
+                                                <div class="col-sm">
+                                                    <input id="office_number" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="office_number"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Designation:
+                                                    </span>
+                                                    <span class="s_website_form_mark">
+                                                        *
+                                                    </span>
+                                                </label>
+
                                                 <div class="col-sm">
                                                     <input id="designation" type="char"
                                                            class="form-control s_website_form_input"
@@ -109,6 +132,9 @@
                                                     <span class="s_website_form_label_content">
                                                         Address:
                                                     </span>
+                                                    <span class="s_website_form_mark">
+                                                        *
+                                                    </span>
                                                 </label>
                                                 <div class="col-sm">
                                                     <input id="address" type="text"
@@ -127,11 +153,86 @@
                                                     <span class="s_website_form_label_content">
                                                         Date Of Birth:
                                                     </span>
+                                                    <span class="s_website_form_mark">
+                                                        *
+                                                    </span>
                                                 </label>
                                                 <div class="col-sm">
                                                     <input id="birth" type="date"
                                                            class="form-control s_website_form_input"
-                                                           name="birth" required="required"/>
+                                                           name="birth"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Father Name:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="father" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="father"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Father DOB:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="father_dob" type="date"
+                                                           class="form-control s_website_form_input"
+                                                           name="father_dob"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Mother Name:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="mother" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="mother"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Mother DOB:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="mother_dob" type="date"
+                                                           class="form-control s_website_form_input"
+                                                           name="mother_dob"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -185,6 +286,24 @@
                                                 <label class="col-form-label col-sm-auto s_website_form_label"
                                                        style="width: 200px">
                                                     <span class="s_website_form_label_content">
+                                                        Spouse DOB:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="spouse_dob" type="date"
+                                                           class="form-control s_website_form_input"
+                                                           name="spouse_dob" placeholder="If Married"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
                                                         Name Of Children's:
                                                     </span>
                                                 </label>
@@ -197,42 +316,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                             data-type="char" data-name="Field">
-                                            <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                <label class="col-form-label col-sm-auto s_website_form_label"
-                                                       style="width: 200px">
-                                                    <span class="s_website_form_label_content">
-                                                        Pan Number:
-                                                    </span>
-                                                </label>
-                                                <div class="col-sm">
-                                                    <input id="pan_number" type="char"
-                                                           class="form-control s_website_form_input"
-                                                           name="pan_number"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                             data-type="char" data-name="Field">
-                                            <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                <label class="col-form-label col-sm-auto s_website_form_label"
-                                                       style="width: 200px">
-                                                    <span class="s_website_form_label_content">
-                                                        Name As Per Pan Card:
-                                                    </span>
-                                                </label>
-                                                <div class="col-sm">
-                                                    <input id="pan_name" type="char"
-                                                           class="form-control s_website_form_input"
-                                                           name="pan_name"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div class="row">
                                         <div class="form-group col-12 s_website_form_field s_website_form_required"
                                              data-type="char" data-name="Field">
@@ -292,6 +376,24 @@
                                                     <input id="mail_id" type="email"
                                                            class="form-control s_website_form_input"
                                                            name="mail_id" required="required"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="text" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Office Email ID:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="office_mail_id" type="email"
+                                                           class="form-control s_website_form_input"
+                                                           name="office_mail_id"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -478,24 +580,42 @@
                                             </div>
                                         </div>
                                     </div>
-<!--                                    <div class="row">-->
-<!--                                        <div class="form-group col-12 s_website_form_field s_website_form_required"-->
-<!--                                             data-type="char" data-name="Field">-->
-<!--                                            <div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--                                                <label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--                                                       style="width: 200px">-->
-<!--                                                    <span class="s_website_form_label_content">-->
-<!--                                                        Upload Your CV:-->
-<!--                                                    </span>-->
-<!--                                                </label>-->
-<!--                                                <div class="col-sm">-->
-<!--                                                    <input id="cv" type="file"-->
-<!--                                                           class="form-control s_website_form_input"-->
-<!--                                                           name="cv"/>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Pan Number:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="pan_number" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="pan_number"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Name As Per Pan Card:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="pan_name" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="pan_name"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                 </div>
@@ -503,7 +623,7 @@
 
 
                             <div class="dropdown-item-text o_add_to_dashboard" align="center">
-                                <button type="submit" id="emp_form" class="btn btn-primary">Submit
+                                <button type="submit" value="Upload" id="emp_form" class="btn btn-primary">Submit
                                 </button>
                                 <!--                                <button type="submit" id="submit_button_ok"-->
                                 <!--                                        class="btn btn-primary">Submit ok-->
@@ -528,6 +648,29 @@
                         <div class="alert alert-success">
                             Success..
                         </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+    <template id="logic_employee_form_error" name="Customer form error">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger">
+                            <div>
+                                <h5 style="color:red;">Please fill the spouse Date Of Birth..</h5>
+                            </div>
+                        </div>
+                        <!--                        <div class="alert alert-danger">-->
+                        <!--                            {% if error_message %}-->
+                        <!--                            {{ error_message }}-->
+                        <!--                            {% else %}-->
+                        <!--                            No error message.-->
+                        <!--                            {% endif %}-->
+                        <!--                        </div>-->
+
                     </div>
                 </div>
             </div>

@@ -1,4 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
-access_emp,access_emp,model_employee_module_form,,1,1,1,1
-acces_emp,access_emp,model_one_many,,1,1,1,1
+access_emp,access_emp,model_employee_module_form,joining_form_for_technical_officer,1,1,1,1
+access_emp_hr,access_emp,model_employee_module_form,joining_form_for_hr,1,1,1,1
+access_emp_form,access_emp,model_one_many,joining_form_for_hr,1,1,1,1
+access_emp_form,access_emp,model_one_many,joining_form_for_technical_officer,1,1,1,1
+access_base_form,access_emp,model_one_many,,0,1,1,1
+access_user,access_emp,model_employee_module_form,,0,1,1,1

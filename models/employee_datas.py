@@ -22,3 +22,14 @@ class LogicStaffInformation(models.Model):
     home_address = fields.Text(string='Address')
 
 
+# class Attachment(models.Model):
+#     _inherit = 'ir.attachment'
+#
+#     attach_rel = fields.Many2many('res.partner', 'attachment', 'attachment_id', 'document_id', string="Attachment")
+#
+#
+# class ResPartner(models.Model):
+#     _inherit = 'res.partner'
+#
+#     attachment = fields.Many2many('ir.attachment', 'attach_rel', 'doc_id', 'attach_id', string="Attachment",
+#                                   help='You can attach multiple documents here', copy=False)

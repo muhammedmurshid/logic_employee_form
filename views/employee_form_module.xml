@@ -41,18 +41,32 @@
                         <group>
                             <field name="employee_name"/>
                             <field name="designation"/>
-                            <field name="mail_id"/>
                             <field name="phone_number"/>
+                            <field name="office_phone"/>
+                            <field name="mail_id"/>
                             <field name="address"/>
+                            <field name="father_name"/>
+                            <field name="father_dob"/>
+
+                            <field name="mother_name"/>
+                            <field name="mother_dob"/>
+
+
+                        </group>
+                         <group name="documents" string="Documents">
+                            <field name="photo"/>
+                            <field name="upload_cv"/>
+                            <field name="aadhar_photo"/>
+                            <field name="pan_photo"/>
+                            <field name="bank_passbook"/>
+
                         </group>
                         <group>
                             <field name="date_of_birth"/>
                             <field name="date_of_joining"/>
 
                         </group>
-                        <group>
-                            <field name="upload_cv"/>
-                        </group>
+
 
                     </group>
                     <notebook>
@@ -84,6 +98,8 @@
                                 <group>
                                     <field name="marital_stats"/>
                                     <field name="spouse_name"
+                                           attrs="{'invisible': [('marital_stats', '!=', 'married')]}"/>
+                                    <field name="spouse_dob"
                                            attrs="{'invisible': [('marital_stats', '!=', 'married')]}"/>
                                     <field name="name_of_children"
                                            attrs="{'invisible': [('marital_stats', '!=', 'married')]}"/>
