@@ -27,10 +27,10 @@ class LogicStaffInformation(models.Model):
     photo = fields.Binary(string='Photo')
 
 
-# class Attachment(models.Model):
-#     _inherit = 'ir.attachment'
-#
-#     attach_rel = fields.Many2many('res.partner', 'attachment', 'attachment_id', 'document_id', string="Attachment")
+class HrEmployeeRelationCustom(models.Model):
+    _inherit = 'hr.employee.relation'
+
+    relation_id = fields.Char(string="Relation")
 #
 #
 # class ResPartner(models.Model):

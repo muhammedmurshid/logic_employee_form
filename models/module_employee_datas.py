@@ -53,6 +53,8 @@ class EmployeeModuleForm(models.Model):
     pan_photo = fields.Binary(string='Pan Card Photo')
     bank_passbook = fields.Binary(string='Bank Passbook')
     photo = fields.Binary(string='Photo')
+    father_number = fields.Char(string='Father Number')
+    mother_number = fields.Char(string='Mother Number')
 
     def confirm_employee_request(self):
         print("hr_approval")
@@ -69,6 +71,7 @@ class EmployeeModuleForm(models.Model):
                 'member_name': rec.father_name,
                 # 'relation_id': 'father',
                 # 'classroom_id': self.class_room.name,
+                'member_contact': rec.father_number,
                 'birth_date': rec.father_dob,
 
 
@@ -76,7 +79,7 @@ class EmployeeModuleForm(models.Model):
             res_list_mom = {
                 'member_name': rec.mother_name,
                 # 'relation_id': 'mother',
-                # 'classroom_id': self.class_room.name,
+                'member_contact': rec.mother_number,
                 'birth_date': rec.mother_dob,
 
             }
@@ -129,7 +132,7 @@ class EmployeeModuleForm(models.Model):
                 'mobile_phone': self.phone_number,
                 'home_address': self.address,
                 'birthday': self.date_of_birth,
-                'joining_date': self.date_of_joining,
+                'joining_date_cus': self.date_of_joining,
                 'bank_name': self.bank_name,
                 'bank_acc_number': self.bank_acc_number,
                 'branch_bank': self.branch_bank,

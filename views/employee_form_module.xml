@@ -46,9 +46,11 @@
                             <field name="mail_id"/>
                             <field name="address"/>
                             <field name="father_name"/>
+                            <field name="father_number"/>
                             <field name="father_dob"/>
 
                             <field name="mother_name"/>
+                            <field name="mother_number"/>
                             <field name="mother_dob"/>
 
 
