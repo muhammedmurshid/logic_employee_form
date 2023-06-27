@@ -1,7 +1,6 @@
 from odoo import http
 from odoo.http import request
 import io
-import cairosvg
 import base64
 
 

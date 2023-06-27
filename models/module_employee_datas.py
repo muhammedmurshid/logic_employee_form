@@ -17,7 +17,7 @@ class EmployeeModuleForm(models.Model):
     ifsc_code = fields.Char(string='IFSC Code')
     micr_code = fields.Char(string='MICR Code')
     name_as_per_bank = fields.Char(string='Name As Per Bank Account')
-    aadhar_card_number = fields.Integer(string='Aadhar Card Number')
+    aadhar_card_number = fields.Char(string='Aadhar Card Number')
     name_as_per_aadhar = fields.Char(string='Name As Per Aadhaar Card')
     pan_card_number = fields.Char(string='Pan Card Number')
     name_as_per_pan = fields.Char(string='Name As Per Pan Card')
