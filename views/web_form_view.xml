@@ -157,7 +157,7 @@
                                                 <div class="col-sm">
                                                     <input id="joining" type="date"
                                                            class="form-control s_website_form_input"
-                                                           name="joining"/>
+                                                           name="joining" required="required"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -199,7 +199,7 @@
                                                 <div class="col-sm">
                                                     <input id="birth" type="date"
                                                            class="form-control s_website_form_input"
-                                                           name="birth"/>
+                                                           name="birth" required="required"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -253,7 +253,7 @@
                                                 <div class="col-sm">
                                                     <input id="father_dob" type="date"
                                                            class="form-control s_website_form_input"
-                                                           name="father_dob"/>
+                                                           name="father_dob" required="required"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -307,7 +307,7 @@
                                                 <div class="col-sm">
                                                     <input id="mother_dob" type="date"
                                                            class="form-control s_website_form_input"
-                                                           name="mother_dob"/>
+                                                           name="mother_dob" required="required"/>
                                                 </div>
                                             </div>
                                         </div>
