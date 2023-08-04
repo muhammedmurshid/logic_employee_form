@@ -431,10 +431,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div class="col-md-6">
-
                                     <div class="row">
                                         <div class="form-group col-12 s_website_form_field s_website_form_required"
                                              data-type="char" data-name="Field">
@@ -664,9 +661,10 @@
                                                     </span>
                                                 </label>
                                                 <div class="col-sm">
-                                                    <input id="upload_cv" type="file"
+                                                    <input id="upload_cv" type="file" multiple="true"
                                                            class="form-control s_website_form_input"
-                                                           name="upload_cv"/>
+                                                           name="upload_cv"
+                                                           accept="image/*,application/pdf,video/*"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -682,9 +680,10 @@
                                                     </span>
                                                 </label>
                                                 <div class="col-sm">
-                                                    <input id="upload_phone" type="file"
+                                                    <input id="upload_phone" type="file" multiple="true"
                                                            class="form-control s_website_form_input"
-                                                           name="upload_phone"/>
+                                                           name="upload_phone"
+                                                           accept="image/*,application/pdf,video/*"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -696,13 +695,14 @@
                                                 <label class="col-form-label col-sm-auto s_website_form_label"
                                                        style="width: 200px">
                                                     <span class="s_website_form_label_content">
-                                                        Aadhar Card Photo:
+                                                        Upload Aadhaar Card:
                                                     </span>
                                                 </label>
                                                 <div class="col-sm">
-                                                    <input id="upload_aadhar" type="file"
+                                                    <input id="upload_aadhar" type="file" multiple="true"
                                                            class="form-control s_website_form_input"
-                                                           name="upload_aadhar"/>
+                                                           name="upload_aadhar"
+                                                           accept="image/*,application/pdf,video/*"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -718,9 +718,10 @@
                                                     </span>
                                                 </label>
                                                 <div class="col-sm">
-                                                    <input id="upload_paan" type="file"
+                                                    <input id="upload_paan" type="file" multiple="true"
                                                            class="form-control s_website_form_input"
-                                                           name="upload_paan"/>
+                                                           name="upload_paan"
+                                                           accept="image/*,application/pdf,video/*"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -736,9 +737,13 @@
                                                     </span>
                                                 </label>
                                                 <div class="col-sm">
-                                                    <input id="upload_passbook" type="file"
+                                                    <!--                                                    <input id="upload_passbook" type="file"-->
+                                                    <!--                                                           class="form-control s_website_form_input"-->
+                                                    <!--                                                           name="upload_passbook"/>-->
+                                                    <input type="file" name="upload_passbook" multiple="true"
                                                            class="form-control s_website_form_input"
-                                                           name="upload_passbook"/>
+                                                           id="upload_passbook"
+                                                           accept="image/*,application/pdf,video/*"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -767,19 +772,135 @@
             </div>
         </t>
     </template>
-    <template id="logic_employee_form_success" name="Customer Form Successfully Submitted">
+    <!--    <template id="logic_employee_form_success" name="Customer Form Successfully Submitted">-->
+    <!--        <t t-call="website.layout">-->
+    <!--            <div id="wrap">-->
+    <!--                <div class="container">-->
+    <!--                    <div class="col-md-12">-->
+    <!--                        <div class="alert alert-success">-->
+    <!--                            Success..-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </t>-->
+
+    <!--        &lt;!&ndash;            <t t-call="website.layout">&ndash;&gt;-->
+    <!--        &lt;!&ndash;                <div id="wrap">&ndash;&gt;-->
+    <!--        &lt;!&ndash;                    <div class="oe_structure" id="oe_structure_website_form_contact_us_thanks_1"/>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                    <div class="container mt-4">&ndash;&gt;-->
+    <!--        &lt;!&ndash;                        <div class="row">&ndash;&gt;-->
+    <!--        &lt;!&ndash;                            <div class="col-lg-7 col-xl-6 mr-lg-auto oe_structure">&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                <section class="pt40 s_text_block pb40 o_colored_level o_cc o_cc1"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                         data-snippet="s_text_block" data-name="Text">&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                    <div class="container">&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                        <span class="d-block fa fa-4x fa-thumbs-up mx-auto rounded-circle bg-primary"/>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                        <br/>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                        <h1 class="text-center">Thank You!</h1>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                        <div class="pb16 pt16 s_hr" data-snippet="s_hr" data-name="Separator">&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                            <hr class="mx-auto border-top w-50 border-dark text-center"/>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                        </div>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                        <h5 class="text-center">&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                            <span class="fa fa-check-circle"/>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                            <span>Your message has been sent&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                                <b>successfully</b>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                            </span>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                        </h5>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                        <p class="text-center">We will get back to you shortly.</p>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                    </div>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                </section>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                            </div>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                            <div class="col-lg-4">&ndash;&gt;-->
+    <!--        &lt;!&ndash;                                <t t-call="website.company_description"/>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                            </div>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                        </div>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                    </div>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                    <div class="oe_structure" id="oe_structure_website_form_contact_us_thanks_2"/>&ndash;&gt;-->
+    <!--        &lt;!&ndash;                </div>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            </t>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        </t>&ndash;&gt;-->
+
+    <!--    </template>-->
+    <template id="logic_employee_form_success" name="Employee Form Successfully Submitted">
         <t t-call="website.layout">
             <div id="wrap">
-                <div class="container">
-                    <div class="col-md-12">
-                        <div class="alert alert-success">
-                            Success..
+                <div class="oe_structure" id="oe_structure_website_form_contact_us_thanks_1"/>
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-lg-7 col-xl-6 mr-lg-auto oe_structure">
+                            <section class="pt40 s_text_block pb40 o_colored_level o_cc o_cc1"
+                                     data-snippet="s_text_block" data-name="Text">
+                                <div class="container">
+                                    <span class="d-block fa fa-4x fa-thumbs-up mx-auto rounded-circle bg-primary"/>
+                                    <br/>
+                                    <h1 class="text-center">Thank You!</h1>
+                                    <div class="pb16 pt16 s_hr" data-snippet="s_hr" data-name="Separator">
+                                        <hr class="mx-auto border-top w-50 border-dark text-center"/>
+                                    </div>
+                                    <h5 class="text-center">
+                                        <span class="fa fa-check-circle"/>
+                                        <span>Your Employee form has been sent
+                                            <b>successfully</b>
+                                        </span>
+                                    </h5>
+                                    <p class="text-center">We will get back to you shortly.</p>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-lg-4">
+                            <t t-call="website.company_description"/>
                         </div>
                     </div>
                 </div>
+                <div class="oe_structure" id="oe_structure_website_form_contact_us_thanks_2"/>
             </div>
         </t>
     </template>
+    <record id="contactus_thanks_test" model="website.page">
+        <field name="name">Thanks (Contact us)</field>
+        <field name="type">qweb</field>
+        <field name="url">/test-thank-you</field>
+        <field name="website_indexed" eval="False"/>
+        <field name="is_published">True</field>
+        <field name="key">website_form.contactus_thanks</field>
+        <field name="arch" type="xml">
+            <t name="Thanks (Contact us)" t-name="website_form.contactus_thanks">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <div class="oe_structure" id="oe_structure_website_form_contact_us_thanks_1"/>
+                        <div class="container mt-4">
+                            <div class="row">
+                                <div class="col-lg-7 col-xl-6 mr-lg-auto oe_structure">
+                                    <section class="pt40 s_text_block pb40 o_colored_level o_cc o_cc1"
+                                             data-snippet="s_text_block" data-name="Text">
+                                        <div class="container">
+                                            <span class="d-block fa fa-4x fa-thumbs-up mx-auto rounded-circle bg-primary"/>
+                                            <br/>
+                                            <h1 class="text-center">Thank You!</h1>
+                                            <div class="pb16 pt16 s_hr" data-snippet="s_hr" data-name="Separator">
+                                                <hr class="mx-auto border-top w-50 border-dark text-center"/>
+                                            </div>
+                                            <h5 class="text-center">
+                                                <span class="fa fa-check-circle"/>
+                                                <span>Your message has been sent
+                                                    <b>successfully</b>
+                                                </span>
+                                            </h5>
+                                            <p class="text-center">We will get back to you shortly.</p>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-lg-4">
+                                    <t t-call="website.company_description"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oe_structure" id="oe_structure_website_form_contact_us_thanks_2"/>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
     <template id="logic_employee_form_error" name="Customer form error">
         <t t-call="website.layout">
             <div id="wrap">

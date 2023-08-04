@@ -27,10 +27,10 @@ class LogicStaffInformation(models.Model):
     photo = fields.Binary(string='Photo')
 
 
-class HrEmployeeRelationCustom(models.Model):
-    _inherit = 'hr.employee.relation'
-
-    relation_id = fields.Char(string="Relation")
+# class HrEmployeeRelationCustom(models.Model):
+#     _inherit = 'hr.employee.relation'
+#
+#     relation_id = fields.Char(string="Relation")
 #
 #
 # class ResPartner(models.Model):
