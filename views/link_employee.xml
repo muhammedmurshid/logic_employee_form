@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+        <record id="inherit_related_employee" model="ir.ui.view">
+            <field name="name">hr.employee.related.partner</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='hr_settings']" position="inside">
+                    <group string="Related Employee">
+                        <group>
+                            <field name="related_employee_id"
+                                   string="Related Employee"/>
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//button[@name='%(hr.plan_wizard_action)d']" position="after">
+                    <button name="add_related_employee" string="Add Related Employee" type="object"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

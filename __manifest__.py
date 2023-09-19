@@ -9,7 +9,8 @@
         'security/ir.model.access.csv',
         'views/web_form_view.xml',
         'views/employee_datas.xml',
-        'views/employee_form_module.xml'
+        'views/employee_form_module.xml',
+        'views/link_employee.xml',
 
     ],
     'demo': [],
