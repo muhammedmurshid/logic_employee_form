@@ -26,15 +26,14 @@ class LogicStaffInformation(models.Model):
     bank_passbook = fields.Binary(string='Bank Passbook')
     photo = fields.Binary(string='Photo')
 
+    # custody details
 
-# class HrEmployeeRelationCustom(models.Model):
-#     _inherit = 'hr.employee.relation'
-#
-#     relation_id = fields.Char(string="Relation")
-#
-#
-# class ResPartner(models.Model):
-#     _inherit = 'res.partner'
-#
-#     attachment = fields.Many2many('ir.attachment', 'attach_rel', 'doc_id', 'attach_id', string="Attachment",
-#                                   help='You can attach multiple documents here', copy=False)
+    custody_ids = fields.One2many('logic.staff.custody.information', 'custody_id', string='Custody')
+
+
+class StaffCustodyInformation(models.Model):
+    _name = 'logic.staff.custody.information'
+
+    custody_id = fields.Many2one('hr.employee', string='Custody', ondelete='cascade')
+    property = fields.Many2one('logic.custody.type', string='Property', ondelete='cascade')
+    serial_number = fields.Char(string='Serial Number')

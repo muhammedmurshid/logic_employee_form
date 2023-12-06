@@ -36,6 +36,15 @@
                             <field name="bank_passbook"/>
                             <field name="photo"/>
                         </group>
+
+                        <group string="Custody" name="custody">
+                            <field name="custody_ids">
+                                <tree editable="bottom">
+                                    <field name="property" options="{'no_create':True}"/>
+                                    <field name="serial_number"/>
+                                </tree>
+                            </field>
+                        </group>
                     </group>
                 </page>
             </notebook>
