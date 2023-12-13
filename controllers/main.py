@@ -8,9 +8,11 @@ class WebsiteForm(http.Controller):
     @http.route(['/employee_form'], type='http', auth="public", website=True)
     def appointment(self):
         partners = request.env['employee.module.form'].sudo().search([])
+        branch = request.env['logic.base.branches'].sudo().search([])
         values = {}
         values.update({
-            'partners': partners
+            'partners': partners,
+            'branch': branch
         })
         return request.render("logic_employee_form.employee_joining_form", values)
 
@@ -23,6 +25,7 @@ class WebsiteForm(http.Controller):
         paan = kw.get('upload_paan')
         aadhar = kw.get('upload_aadhar')
         baank = kw.get('upload_passbook')
+
         # Pass the file data to your module form
         # request.env['employee.module.form'].create({
         #     # 'name': file_name,
@@ -55,6 +58,7 @@ class WebsiteForm(http.Controller):
                     'bank_acc_number': kw.get('account_number'),
                     'ifsc_code': kw.get('ifsc'),
                     'micr_code': kw.get('micr'),
+                    'branch_id': kw.get('branch'),
                     'name_as_per_bank': kw.get('name_as_per_bank'),
                     'aadhar_card_number': kw.get('aadhar_number'),
                     'name_as_per_aadhar': kw.get('name_as_per_aadhar'),
@@ -97,6 +101,8 @@ class WebsiteForm(http.Controller):
                 'bank_acc_number': kw.get('account_number'),
                 'ifsc_code': kw.get('ifsc'),
                 'micr_code': kw.get('micr'),
+                'branch_id': kw.get('branch'),
+
                 'name_as_per_bank': kw.get('name_as_per_bank'),
                 'aadhar_card_number': kw.get('aadhar_number'),
                 'name_as_per_aadhar': kw.get('name_as_per_aadhar'),

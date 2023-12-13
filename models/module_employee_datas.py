@@ -55,6 +55,7 @@ class EmployeeModuleForm(models.Model):
     photo = fields.Binary(string='Photo')
     father_number = fields.Char(string='Father Number')
     mother_number = fields.Char(string='Mother Number')
+    branch_id = fields.Many2one('logic.base.branches', string='Branch')
 
     def confirm_employee_request(self):
         print("hr_approval")

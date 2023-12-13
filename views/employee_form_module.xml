@@ -41,6 +41,7 @@
                         <group>
                             <field name="employee_name"/>
                             <field name="designation"/>
+                            <field name="branch_id" options="{'no_create':True}"/>
                             <field name="phone_number"/>
                             <field name="office_phone"/>
                             <field name="mail_id"/>
