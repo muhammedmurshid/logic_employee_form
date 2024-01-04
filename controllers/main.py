@@ -18,10 +18,8 @@ class WebsiteForm(http.Controller):
 
     @http.route(['/employee_form/submit'], type='http', csrf=False, auth='public', website=True, method=['POST'])
     def handle_file_upload(self, **kw):
-        file_name = kw.get('upload_cv').filename
         file = kw.get('upload_cv')
         photo = kw.get('upload_phone')
-        aadhar = kw.get('upload_aadhar')
         paan = kw.get('upload_paan')
         aadhar = kw.get('upload_aadhar')
         baank = kw.get('upload_passbook')
