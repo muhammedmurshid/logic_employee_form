@@ -11,7 +11,7 @@
     <template id="employee_joining_form">
         <title>Joining form</title>
         <t t-call="website.layout">
-            <script type="text/javascript" src="refund_logic/static/src/js/submitt_button.js"/>
+            <script type="text/javascript" src="logic_employee_form/static/src/js/test.js"/>
             <div id="wrap">
                 <div class="container">
                     <div class="col-md-12">
@@ -947,6 +947,12 @@
                 </div>
             </div>
         </t>
+    </template>
+
+    <template id="assets_backend_field_hide_employee" name="add_javascript_assets" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="logic_employee_form/static/src/js/test.js"></script>
+        </xpath>
     </template>
 
 </odoo>

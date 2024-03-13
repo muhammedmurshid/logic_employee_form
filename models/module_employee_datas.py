@@ -8,6 +8,7 @@ class EmployeeModuleForm(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'employee_name'
     _description = "Joining Form"
+    _order = 'id desc'
 
     bank_name = fields.Char(string='Bank Name')
     spouse_name = fields.Char(string='Spouse Name')
