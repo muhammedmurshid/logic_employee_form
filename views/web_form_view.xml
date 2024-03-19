@@ -13,14 +13,14 @@
         <t t-call="website.layout">
             <script type="text/javascript" src="logic_employee_form/static/src/js/test.js"/>
             <div id="wrap">
-                <div class="container">
+                <div class="container" style="background-color: #f5f5f5">
                     <div class="col-md-12">
                         <form action="/employee_form/submit" method="post" enctype="multipart/form-data"
                               class="oe_import">
                             <br></br>
-                            <h3 align="center">Joining Form</h3>
+                            <h3 align="center"><u>JOINING FORM</u></h3>
                             <br></br>
-                            <div class="row">
+                            <div class="row" >
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="form-group col-12 s_website_form_field s_website_form_required"
@@ -128,6 +128,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="form-group col-12 s_website_form_field s_website_form_required"
                                              data-type="text" data-name="Field">
@@ -142,6 +143,30 @@
                                                     <input id="office_mail_id" type="email"
                                                            class="form-control s_website_form_input"
                                                            name="office_mail_id"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Department:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select name="department"
+                                                            t-attf-class="form-control s_website_form_input"
+                                                            required="1">
+                                                        <t t-foreach="department or []" t-as="department">
+                                                            <option t-att-value="department.id">
+                                                                <t t-esc="department.name"/>
+                                                            </option>
+                                                        </t>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -203,6 +228,32 @@
                                                     <input id="address" type="text"
                                                            class="form-control s_website_form_input"
                                                            name="address" required="required"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Gender:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <select name="gender"
+                                                            id="gender"
+                                                            class="form-control link-style">
+                                                        <option value="male">Male
+                                                        </option>
+                                                        <option value="female">Female
+                                                        </option>
+                                                        <option value="other">Other
+                                                        </option>
+                                                    </select>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -378,6 +429,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="form-group col-12 s_website_form_field s_website_form_required"
                                              data-type="char" data-name="Field">
@@ -450,26 +502,6 @@
                                                            class="form-control s_website_form_input"
                                                            name="esi_number"
                                                            placeholder="If Any In Previous Employment"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                             data-type="char" data-name="Field">
-                                            <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                <label class="col-form-label col-sm-auto s_website_form_label"
-                                                       style="width: 200px">
-                                                    <span class="s_website_form_label_content">
-                                                        Qualification:
-                                                    </span>
-                                                </label>
-                                                <div class="col-sm">
-                                                    <input id="qualification" type="char"
-                                                           class="form-control s_website_form_input"
-                                                           name="qualification"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -645,7 +677,7 @@
                                                 <label class="col-form-label col-sm-auto s_website_form_label"
                                                        style="width: 200px">
                                                     <span class="s_website_form_label_content">
-                                                        Pan Number:
+                                                        Pan Card Number:
                                                     </span>
                                                 </label>
                                                 <div class="col-sm">
@@ -656,6 +688,408 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="text" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Work Location(city):
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="work_location" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="work_location"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="text" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Work Place(office):
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="work_place" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="work_place"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Highest Education Qualification - College Name:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="highest_education_college" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="highest_education_college"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Highest Education Qualification - Full Time / Part Time /
+                                                        Distance Education:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="highest_education_time" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="highest_education_time"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Highest Education Qualification - Degree:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="highest_education_education" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="highest_education_education"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Highest Education Qualification - Specialization:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="highest_education_specialization" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="highest_education_specialization"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Highest Education Qualification - Passed out Month and Year:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="highest_education_year" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="highest_education_year"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Previous Employment Company Name:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="previous_employment_company" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="previous_employment_company"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Previous Employment Company Location:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="previous_employment_company_location" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="previous_employment_company_location"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Previous Employment Company Designation:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="previous_employment_designation" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="previous_employment_designation"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Previous Employment Company Tenure (Eg: 2007 June to 2010 Dec):
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="previous_employment_company_tenure" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="previous_employment_company_tenure"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Total Years of Experience (Before joining veranda):
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="total_years_of_experience_varanda" type="number"
+                                                           class="form-control s_website_form_input"
+                                                           name="total_years_of_experience_varanda"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Emergency Contact Person Name:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="emergency_contact_person_name" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="emergency_contact_person_name"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Emergency Contact Person Relationship:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="emergency_contact_person_relationship" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="emergency_contact_person_relationship"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Emergency Contact Person Mobile Number:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="emergency_contact_person_mobile_number" type="number"
+                                                           class="form-control s_website_form_input"
+                                                           name="emergency_contact_person_mobile_number"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Emergency Contact Person Email ID:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="emergency_contact_person_mail" type="email"
+                                                           class="form-control s_website_form_input"
+                                                           name="emergency_contact_person_mail"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Emergency Contact Person Correspondence Address:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="emergency_contact_correspondence_address" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="emergency_contact_correspondence_address"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Emergency Details - Any Allergies specifically:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="emergency_details_any_allergies" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="emergency_details_any_allergies"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Nominee Name:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="nominee_name" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="nominee_name"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Nominee Relationship:
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="nominee_relationship" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="nominee_relationship"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required"
+                                             data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                       style="width: 200px">
+                                                    <span class="s_website_form_label_content">
+                                                        Nominee ID Proof (PAN or Aadhar Number):
+                                                    </span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="nominee_id_proof" type="char"
+                                                           class="form-control s_website_form_input"
+                                                           name="nominee_id_proof"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--                                    <div class="row">-->
+                                    <!--                                        <div class="form-group col-12 s_website_form_field s_website_form_required"-->
+                                    <!--                                             data-type="char" data-name="Field">-->
+                                    <!--                                            <div class="row s_col_no_resize s_col_no_bgcolor">-->
+                                    <!--                                                <label class="col-form-label col-sm-auto s_website_form_label"-->
+                                    <!--                                                       style="width: 200px">-->
+                                    <!--                                                    <span class="s_website_form_label_content">-->
+                                    <!--                                                        Qualification:-->
+                                    <!--                                                    </span>-->
+                                    <!--                                                </label>-->
+                                    <!--                                                <div class="col-sm">-->
+                                    <!--                                                    <input id="qualification" type="char"-->
+                                    <!--                                                           class="form-control s_website_form_input"-->
+                                    <!--                                                           name="qualification"/>-->
+                                    <!--                                                </div>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+
                                     <div class="row">
                                         <div class="form-group col-12 s_website_form_field s_website_form_required"
                                              data-type="char" data-name="Field">

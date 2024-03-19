@@ -26,6 +26,7 @@ class LogicStaffInformation(models.Model):
     bank_passbook = fields.Binary(string='Bank Passbook')
     photo = fields.Binary(string='Photo')
 
+
     # custody details
 
     custody_ids = fields.One2many('logic.staff.custody.information', 'custody_id', string='Custody')

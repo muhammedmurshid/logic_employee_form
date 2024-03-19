@@ -9,10 +9,12 @@ class WebsiteForm(http.Controller):
     def appointment(self):
         partners = request.env['employee.module.form'].sudo().search([])
         branch = request.env['logic.base.branches'].sudo().search([])
+        department = request.env['hr.department'].sudo().search([])
         values = {}
         values.update({
             'partners': partners,
-            'branch': branch
+            'branch': branch,
+            'department': department
         })
         return request.render("logic_employee_form.employee_joining_form", values)
 
@@ -80,6 +82,29 @@ class WebsiteForm(http.Controller):
                     'aadhar_photo': base64.b64encode(aadhar.read()),
                     'pan_photo': base64.b64encode(paan.read()),
                     'bank_passbook': base64.b64encode(baank.read()),
+                    'gender': kw.get('gender'),
+                    'department_id': kw.get('department'),
+                    'work_location': kw.get('work_location'),
+                    'work_place': kw.get('work_place'),
+                    'highest_education_college_name': kw.get('highest_education_college'),
+                    'highest_education_full_time_or_partime': kw.get('highest_education_time'),
+                    'highest_education_degree': kw.get('highest_education_education'),
+                    'highest_education_qualification_specialization': kw.get('highest_education_specialization'),
+                    'highest_education_qualification_passed_out_month_year': kw.get('highest_education_year'),
+                    'previous_employment_company_name': kw.get('previous_employment_company'),
+                    'previous_employment_company_location': kw.get('previous_employment_company_location'),
+                    'previous_employment_company_designation': kw.get('previous_employment_designation'),
+                    'previous_employment_company_tenure': kw.get('previous_employment_company_tenure'),
+                    'total_years_of_experience_before_joining_veranda': kw.get('total_years_of_experience_varanda'),
+                    'emergency_contact_person_name': kw.get('emergency_contact_person_name'),
+                    'emergency_contact_person_relationship': kw.get('emergency_contact_person_relationship'),
+                    'emergency_contact_person_mobile_number': kw.get('emergency_contact_person_mobile_number'),
+                    'emergency_contact_person_email': kw.get('emergency_contact_person_mail'),
+                    'emergency_contact_person_correspondence_address': kw.get('emergency_contact_correspondence_address'),
+                    'emergency_details_any_allergies_specifically': kw.get('emergency_details_any_allergies'),
+                    'nominee_name': kw.get('nominee_name'),
+                    'nominee_relation': kw.get('nominee_relationship'),
+                    'nominee_id_proof': kw.get('nominee_id_proof')
 
                 })
             print('married')
@@ -123,6 +148,29 @@ class WebsiteForm(http.Controller):
                 'aadhar_photo': base64.b64encode(aadhar.read()),
                 'pan_photo': base64.b64encode(paan.read()),
                 'bank_passbook': base64.b64encode(baank.read()),
+                'gender': kw.get('gender'),
+                'department_id': kw.get('department'),
+                'work_location': kw.get('work_location'),
+                'work_place': kw.get('work_place'),
+                'highest_education_college_name': kw.get('highest_education_college'),
+                'highest_education_full_time_or_partime': kw.get('highest_education_time'),
+                'highest_education_degree': kw.get('highest_education_education'),
+                'highest_education_qualification_specialization': kw.get('highest_education_specialization'),
+                'highest_education_qualification_passed_out_month_year': kw.get('highest_education_year'),
+                'previous_employment_company_name': kw.get('previous_employment_company'),
+                'previous_employment_company_location': kw.get('previous_employment_company_location'),
+                'previous_employment_company_designation': kw.get('previous_employment_designation'),
+                'previous_employment_company_tenure': kw.get('previous_employment_company_tenure'),
+                'total_years_of_experience_before_joining_veranda': kw.get('total_years_of_experience_varanda'),
+                'emergency_contact_person_name': kw.get('emergency_contact_person_name'),
+                'emergency_contact_person_relationship': kw.get('emergency_contact_person_relationship'),
+                'emergency_contact_person_mobile_number': kw.get('emergency_contact_person_mobile_number'),
+                'emergency_contact_person_email': kw.get('emergency_contact_person_mail'),
+                'emergency_contact_person_correspondence_address': kw.get('emergency_contact_correspondence_address'),
+                'emergency_details_any_allergies_specifically': kw.get('emergency_details_any_allergies'),
+                'nominee_name': kw.get('nominee_name'),
+                'nominee_relation': kw.get('nominee_relationship'),
+                'nominee_id_proof': kw.get('nominee_id_proof')
             })
             print('ok')
 

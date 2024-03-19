@@ -5,11 +5,14 @@
         <field name="model">employee.module.form</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="date_of_joining"/>
                 <field name="employee_name"/>
                 <field name="designation"/>
                 <field name="mail_id"/>
-                <field name="phone_number"/>
-                <field name="state"/>
+                <field name="phone_number" string="Phone Number"/>
+                <field name="state" widget="badge" decoration-success="state == 'done'"
+                       decoration-primary="state == 'confirm'" decoration-danger="state == 'cancel'"
+                       decoration-info="state == 'draft'"/>
             </tree>
 
         </field>
@@ -42,31 +45,43 @@
                             <field name="employee_name"/>
                             <field name="designation"/>
                             <field name="branch_id" options="{'no_create':True}"/>
+                            <field name="department_id" options="{'no_create':True}"/>
                             <field name="phone_number"/>
                             <field name="office_phone"/>
+                            <field name="gender"/>
                             <field name="mail_id"/>
                             <field name="address"/>
+                            <field name="date_of_birth"/>
+                            <field name="date_of_joining"/>
                             <field name="father_name"/>
                             <field name="father_number"/>
                             <field name="father_dob"/>
-
                             <field name="mother_name"/>
                             <field name="mother_number"/>
                             <field name="mother_dob"/>
-
-
-                        </group>
-                         <group name="documents" string="Documents">
-                            <field name="photo"/>
-                            <field name="upload_cv"/>
-                            <field name="aadhar_photo"/>
-                            <field name="pan_photo"/>
-                            <field name="bank_passbook"/>
-
+                            <field name="work_location"/>
+                            <field name="work_place"/>
+                            <field name="highest_education_college_name"/>
+                            <field name="highest_education_full_time_or_partime"/>
+                            <field name="highest_education_degree"/>
+                            <field name="highest_education_qualification_specialization"/>
                         </group>
                         <group>
-                            <field name="date_of_birth"/>
-                            <field name="date_of_joining"/>
+                            <field name="highest_education_qualification_passed_out_month_year"/>
+                            <field name="previous_employment_company_name"/>
+                            <field name="previous_employment_company_location"/>
+                            <field name="previous_employment_company_designation"/>
+                            <field name="previous_employment_company_tenure"/>
+                            <field name="total_years_of_experience_before_joining_veranda"/>
+                            <field name="emergency_contact_person_name"/>
+                            <field name="emergency_contact_person_relationship"/>
+                            <field name="emergency_contact_person_mobile_number"/>
+                            <field name="emergency_contact_person_email"/>
+                            <field name="emergency_contact_person_correspondence_address"/>
+                            <field name="emergency_details_any_allergies_specifically"/>
+                            <field name="nominee_name"/>
+                            <field name="nominee_relation"/>
+                            <field name="nominee_id_proof"/>
 
                         </group>
 
@@ -111,6 +126,17 @@
                                     <field name="esi_ip_number"/>
 
 
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Documents">
+                            <group>
+                                <group>
+                                    <field name="photo"/>
+                                    <field name="upload_cv"/>
+                                    <field name="aadhar_photo"/>
+                                    <field name="pan_photo"/>
+                                    <field name="bank_passbook"/>
                                 </group>
                             </group>
                         </page>
