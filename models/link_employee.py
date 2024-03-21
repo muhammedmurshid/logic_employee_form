@@ -75,6 +75,53 @@ class LinkEmployeeJoiningForm(models.Model):
                 self.marital = self.related_employee_id.marital_stats
             if self.related_employee_id.spouse_dob:
                 self.spouse_birthdate = self.related_employee_id.spouse_dob
+            if self.related_employee_id.work_location:
+                self.work_location = self.related_employee_id.work_location
+            if self.related_employee_id.work_place:
+                self.work_place = self.related_employee_id.work_place
+            if self.related_employee_id.highest_education_college_name:
+                self.highest_education_college_name = self.related_employee_id.highest_education_college_name
+            if self.related_employee_id.highest_education_full_time_or_partime:
+                self.highest_education_full_time_or_partime = self.related_employee_id.highest_education_full_time_or_partime
+            if self.related_employee_id.highest_education_degree:
+                self.highest_education_degree = self.related_employee_id.highest_education_degree
+            if self.related_employee_id.highest_education_qualification_specialization:
+                self.highest_education_qualification_specialization = self.related_employee_id.highest_education_qualification_specialization
+            if self.related_employee_id.highest_education_qualification_passed_out_month_year:
+                self.highest_education_qualification_passed_out_month_year = self.related_employee_id.highest_education_qualification_passed_out_month_year
+            if self.related_employee_id.previous_employment_company_name:
+                self.previous_employment_company_name = self.related_employee_id.previous_employment_company_name
+            if self.related_employee_id.previous_employment_company_location:
+                self.previous_employment_company_location = self.related_employee_id.previous_employment_company_location
+            if self.related_employee_id.previous_employment_company_designation:
+                self.previous_employment_company_designation = self.related_employee_id.previous_employment_company_designation
+            if self.related_employee_id.previous_employment_company_tenure:
+                self.previous_employment_company_tenure = self.related_employee_id.previous_employment_company_tenure
+            if self.related_employee_id.total_years_of_experience_before_joining_veranda:
+                self.total_years_of_experience_before_joining_veranda = self.related_employee_id.total_years_of_experience_before_joining_veranda
+            if self.related_employee_id.emergency_contact_person_name:
+                self.emergency_contact_person_name = self.related_employee_id.emergency_contact_person_name
+            if self.related_employee_id.emergency_contact_person_relationship:
+                self.emergency_contact_person_relationship = self.related_employee_id.emergency_contact_person_relationship
+
+            if self.related_employee_id.department_id:
+                self.department_id = self.related_employee_id.department_id.id
+            if self.related_employee_id.emergency_contact_person_mobile_number:
+                self.emergency_contact_person_mobile_number = self.related_employee_id.emergency_contact_person_mobile_number
+            if self.related_employee_id.emergency_contact_person_email:
+                self.emergency_contact_person_email = self.related_employee_id.emergency_contact_person_email
+            if self.related_employee_id.emergency_contact_person_correspondence_address:
+                self.emergency_contact_person_correspondence_address = self.related_employee_id.emergency_contact_person_correspondence_address
+            if self.related_employee_id.emergency_details_any_allergies_specifically:
+                self.emergency_details_any_allergies_specifically = self.related_employee_id.emergency_details_any_allergies_specifically
+            if self.related_employee_id.nominee_name:
+                self.nominee_name = self.related_employee_id.nominee_name
+            if self.related_employee_id.nominee_relation:
+                self.nominee_relation = self.related_employee_id.nominee_relation
+
+            if self.related_employee_id.nominee_id_proof:
+                self.nominee_id_proof = self.related_employee_id.nominee_id_proof
+
         else:
             raise UserError("Please Select Related Employee")
 

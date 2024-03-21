@@ -47,6 +47,37 @@
                         </group>
                     </group>
                 </page>
+                <page string="Joining Form Details" name="joining_form_details">
+                    <group>
+                        <group>
+                            <field name="work_location"/>
+                            <field name="work_place"/>
+                            <field name="highest_education_college_name"/>
+                            <field name="highest_education_full_time_or_partime"/>
+                            <field name="highest_education_degree"/>
+                            <field name="highest_education_qualification_specialization"/>
+                            <field name="highest_education_qualification_passed_out_month_year"/>
+                            <field name="previous_employment_company_name"/>
+                            <field name="previous_employment_company_location"/>
+
+
+                        </group>
+                        <group>
+                            <field name="previous_employment_company_designation"/>
+                            <field name="previous_employment_company_tenure"/>
+                            <field name="total_years_of_experience_before_joining_veranda"/>
+                            <field name="emergency_contact_person_name"/>
+                            <field name="emergency_contact_person_relationship"/>
+                            <field name="emergency_contact_person_mobile_number"/>
+                            <field name="emergency_contact_person_email"/>
+                            <field name="emergency_contact_person_correspondence_address"/>
+                            <field name="emergency_details_any_allergies_specifically"/>
+                            <field name="nominee_name"/>
+                            <field name="nominee_relation"/>
+                            <field name="nominee_id_proof"/>
+                        </group>
+                    </group>
+                </page>
             </notebook>
             <xpath expr="//field[@name='spouse_birthdate']" position="after">
                 <field name="children_name" attrs="{'invisible': [('marital', '!=', 'married')]}"/>

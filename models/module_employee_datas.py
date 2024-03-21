@@ -150,7 +150,29 @@ class EmployeeModuleForm(models.Model):
                 'bank_passbook': self.bank_passbook,
                 'photo': self.photo,
                 'private_email': self.mail_id,
-                'work_phone': self.office_phone
+                'work_phone': self.office_phone,
+                'work_location': self.work_location,
+                'work_place': self.work_place,
+                'highest_education_college_name': self.highest_education_college_name,
+                'highest_education_full_time_or_partime': self.highest_education_full_time_or_partime,
+                'highest_education_degree': self.highest_education_degree,
+                'highest_education_qualification_specialization': self.highest_education_qualification_specialization,
+                'highest_education_qualification_passed_out_month_year': self.highest_education_qualification_passed_out_month_year,
+                'previous_employment_company_name': self.previous_employment_company_name,
+                'previous_employment_company_location': self.previous_employment_company_location,
+                'total_years_of_experience_before_joining_veranda': self.total_years_of_experience_before_joining_veranda,
+                'emergency_contact_person_name': self.emergency_contact_person_name,
+                'emergency_contact_person_relationship': self.emergency_contact_person_relationship,
+                'emergency_contact_person_mobile_number': self.emergency_contact_person_mobile_number,
+                'emergency_contact_person_correspondence_address': self.emergency_contact_person_correspondence_address,
+                'emergency_details_any_allergies_specifically': self.emergency_details_any_allergies_specifically,
+                'nominee_name': self.nominee_name,
+                'previous_employment_company_designation': self.previous_employment_company_designation,
+                'previous_employment_company_tenure': self.previous_employment_company_tenure,
+
+                'nominee_relation': self.nominee_relation,
+                'nominee_id_proof': self.nominee_id_proof,
+
 
 
             }
@@ -186,7 +208,27 @@ class EmployeeModuleForm(models.Model):
                 'bank_passbook': self.bank_passbook,
                 'photo': self.photo,
                 'private_email': self.mail_id,
-                'work_phone': self.office_phone
+                'work_phone': self.office_phone,
+                'work_location': self.work_location,
+                'work_place': self.work_place,
+                'highest_education_college_name': self.highest_education_college_name,
+                'highest_education_full_time_or_partime': self.highest_education_full_time_or_partime,
+                'highest_education_degree': self.highest_education_degree,
+                'highest_education_qualification_specialization': self.highest_education_qualification_specialization,
+                'highest_education_qualification_passed_out_month_year': self.highest_education_qualification_passed_out_month_year,
+                'previous_employment_company_name': self.previous_employment_company_name,
+                'previous_employment_company_location': self.previous_employment_company_location,
+                'total_years_of_experience_before_joining_veranda': self.total_years_of_experience_before_joining_veranda,
+                'emergency_contact_person_name': self.emergency_contact_person_name,
+                'emergency_contact_person_relationship': self.emergency_contact_person_relationship,
+                'emergency_contact_person_mobile_number': self.emergency_contact_person_mobile_number,
+                'emergency_contact_person_correspondence_address': self.emergency_contact_person_correspondence_address,
+                'emergency_details_any_allergies_specifically': self.emergency_details_any_allergies_specifically,
+                'nominee_name': self.nominee_name,
+                'nominee_relation': self.nominee_relation,
+                'nominee_id_proof': self.nominee_id_proof,
+                'previous_employment_company_designation': self.previous_employment_company_designation,
+                'previous_employment_company_tenure': self.previous_employment_company_tenure,
 
             }
             )

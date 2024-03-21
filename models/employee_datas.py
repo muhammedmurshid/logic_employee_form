@@ -26,6 +26,33 @@ class LogicStaffInformation(models.Model):
     bank_passbook = fields.Binary(string='Bank Passbook')
     photo = fields.Binary(string='Photo')
 
+    work_location = fields.Char(string='Work Location(city)')
+    work_place = fields.Char(string='Work Place(office)')
+    highest_education_college_name = fields.Char(string='Highest Education College Name')
+    highest_education_full_time_or_partime = fields.Char(
+        string='Highest Education Qualification - Full Time / Part Time / Distance Education')
+    highest_education_degree = fields.Char(string='Highest Education Qualification - Degree')
+    highest_education_qualification_specialization = fields.Char(
+        string='Highest Education Qualification - Specialization')
+    highest_education_qualification_passed_out_month_year = fields.Char(
+        string='Highest Education Qualification - Passed Out Month Year')
+    previous_employment_company_name = fields.Char(string='Previous Employment - Company Name')
+    previous_employment_company_location = fields.Char(string='Previous Employment - Company Location')
+    previous_employment_company_designation = fields.Char(string='Previous Employment - Company Designation')
+    previous_employment_company_tenure = fields.Char(string='Previous Employment - Company Tenure')
+    total_years_of_experience_before_joining_veranda = fields.Integer(
+        string='Total Years Of Experience Before Joining Veranda')
+    emergency_contact_person_name = fields.Char(string='Emergency Contact Person Name')
+    emergency_contact_person_relationship = fields.Char(string='Emergency Contact Person Relationship')
+    emergency_contact_person_mobile_number = fields.Char(string='Emergency Contact Person Mobile Number')
+    emergency_contact_person_email = fields.Char(string='Emergency Contact Person Email')
+    emergency_contact_person_correspondence_address = fields.Char(
+        string='Emergency Contact Person Correspondence Address')
+    emergency_details_any_allergies_specifically = fields.Char(string='Emergency Details - Any Allergies Specifically')
+    nominee_name = fields.Char(string='Nominee Name')
+    nominee_relation = fields.Char(string='Nominee Relation')
+    nominee_id_proof = fields.Char(string='Nominee ID Proof Pan or Aadhar')
+
 
     # custody details
 
