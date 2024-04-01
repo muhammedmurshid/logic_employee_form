@@ -95,149 +95,159 @@ class EmployeeModuleForm(models.Model):
         self.state = 'cancel'
 
     def confirm_technical_officer(self):
-        abc = []
-        for rec in self:
-            res_list = {
-                'member_name': rec.father_name,
-                # 'relation_id': 'father',
-                # 'classroom_id': self.class_room.name,
-                'member_contact': rec.father_number,
-                'birth_date': rec.father_dob,
-
-
-            }
-            res_list_mom = {
-                'member_name': rec.mother_name,
-                # 'relation_id': 'mother',
-                'member_contact': rec.mother_number,
-                'birth_date': rec.mother_dob,
-
-            }
-            abc.append((0, 0, res_list))
-            abc.append((0, 0, res_list_mom))
-
-        if self.marital_stats == 'married':
-            self.env['hr.employee'].create({
-                'marital': 'married',
+        # abc = []
+        # for rec in self:
+        #     res_list = {
+        #         'member_name': rec.father_name,
+        #         # 'relation_id': 'father',
+        #         # 'classroom_id': self.class_room.name,
+        #         'member_contact': rec.father_number,
+        #         'birth_date': rec.father_dob,
+        #
+        #
+        #     }
+        #     res_list_mom = {
+        #         'member_name': rec.mother_name,
+        #         # 'relation_id': 'mother',
+        #         'member_contact': rec.mother_number,
+        #         'birth_date': rec.mother_dob,
+        #
+        #     }
+        #     abc.append((0, 0, res_list))
+        #     abc.append((0, 0, res_list_mom))
+        #
+        # if self.marital_stats == 'married':
+        #     self.env['hr.employee'].create({
+        #         'marital': 'married',
+        #         'name': self.employee_name,
+        #         'job_title': self.designation,
+        #         'work_email': self.mail_id,
+        #         'mobile_phone': self.phone_number,
+        #         'home_address': self.address,
+        #         'birthday': self.date_of_birth,
+        #         'joining_date_cus': self.date_of_joining,
+        #         'bank_name': self.bank_name,
+        #         'bank_acc_number': self.bank_acc_number,
+        #         'branch_bank': self.branch_bank,
+        #         'ifsc_code': self.ifsc_code,
+        #         'department_id': self.department_id.id,
+        #         'micr_code': self.micr_code,
+        #         'name_as_per_bank': self.name_as_per_bank,
+        #         'aadhar_card_number': self.aadhar_card_number,
+        #         'name_as_per_aadhar': self.name_as_per_aadhar,
+        #         'pan_card_number': self.pan_card_number,
+        #         'name_as_per_pan': self.name_as_per_pan,
+        #         'pf_uan_number': self.pf_uan_number,
+        #         'esi_ip_number': self.esi_ip_number,
+        #         'blood_group': self.blood_group,
+        #         'spouse_birthdate': self.spouse_dob,
+        #         'spouse_complete_name': self.spouse_name,
+        #         'children_name': self.name_of_children,
+        #         'fam_ids': abc,
+        #         'upload_cv': self.upload_cv,
+        #         'aadhar_photo': self.aadhar_photo,
+        #         'pan_photo': self.pan_photo,
+        #         'bank_passbook': self.bank_passbook,
+        #         'photo': self.photo,
+        #         'private_email': self.mail_id,
+        #         'work_phone': self.office_phone,
+        #         'work_location': self.work_location,
+        #         'work_place': self.work_place,
+        #         'highest_education_college_name': self.highest_education_college_name,
+        #         'highest_education_full_time_or_partime': self.highest_education_full_time_or_partime,
+        #         'highest_education_degree': self.highest_education_degree,
+        #         'highest_education_qualification_specialization': self.highest_education_qualification_specialization,
+        #         'highest_education_qualification_passed_out_month_year': self.highest_education_qualification_passed_out_month_year,
+        #         'previous_employment_company_name': self.previous_employment_company_name,
+        #         'previous_employment_company_location': self.previous_employment_company_location,
+        #         'total_years_of_experience_before_joining_veranda': self.total_years_of_experience_before_joining_veranda,
+        #         'emergency_contact_person_name': self.emergency_contact_person_name,
+        #         'emergency_contact_person_relationship': self.emergency_contact_person_relationship,
+        #         'emergency_contact_person_mobile_number': self.emergency_contact_person_mobile_number,
+        #         'emergency_contact_person_correspondence_address': self.emergency_contact_person_correspondence_address,
+        #         'emergency_details_any_allergies_specifically': self.emergency_details_any_allergies_specifically,
+        #         'nominee_name': self.nominee_name,
+        #         'previous_employment_company_designation': self.previous_employment_company_designation,
+        #         'previous_employment_company_tenure': self.previous_employment_company_tenure,
+        #
+        #         'nominee_relation': self.nominee_relation,
+        #         'nominee_id_proof': self.nominee_id_proof,
+        #
+        #
+        #
+        #     }
+        #     )
+        # else:
+        #     self.env['hr.employee'].create({
+        #         'name': self.employee_name,
+        #         'job_title': self.designation,
+        #         'work_email': self.mail_id,
+        #         'mobile_phone': self.phone_number,
+        #         'home_address': self.address,
+        #         'birthday': self.date_of_birth,
+        #         'joining_date_cus': self.date_of_joining,
+        #         'bank_name': self.bank_name,
+        #         'bank_acc_number': self.bank_acc_number,
+        #         'branch_bank': self.branch_bank,
+        #         'ifsc_code': self.ifsc_code,
+        #         'micr_code': self.micr_code,
+        #         'name_as_per_bank': self.name_as_per_bank,
+        #         'aadhar_card_number': self.aadhar_card_number,
+        #         'name_as_per_aadhar': self.name_as_per_aadhar,
+        #         'pan_card_number': self.pan_card_number,
+        #         'name_as_per_pan': self.name_as_per_pan,
+        #         'pf_uan_number': self.pf_uan_number,
+        #         'esi_ip_number': self.esi_ip_number,
+        #         'blood_group': self.blood_group,
+        #         'fam_ids': abc,
+        #         'spouse_complete_name': self.spouse_name,
+        #         'children_name': self.name_of_children,
+        #         'upload_cv': self.upload_cv,
+        #         'aadhar_photo': self.aadhar_photo,
+        #         'pan_photo': self.pan_photo,
+        #         'bank_passbook': self.bank_passbook,
+        #         'photo': self.photo,
+        #         'private_email': self.mail_id,
+        #         'work_phone': self.office_phone,
+        #         'work_location': self.work_location,
+        #         'work_place': self.work_place,
+        #         'highest_education_college_name': self.highest_education_college_name,
+        #         'highest_education_full_time_or_partime': self.highest_education_full_time_or_partime,
+        #         'highest_education_degree': self.highest_education_degree,
+        #         'highest_education_qualification_specialization': self.highest_education_qualification_specialization,
+        #         'highest_education_qualification_passed_out_month_year': self.highest_education_qualification_passed_out_month_year,
+        #         'previous_employment_company_name': self.previous_employment_company_name,
+        #         'previous_employment_company_location': self.previous_employment_company_location,
+        #         'total_years_of_experience_before_joining_veranda': self.total_years_of_experience_before_joining_veranda,
+        #         'emergency_contact_person_name': self.emergency_contact_person_name,
+        #         'emergency_contact_person_relationship': self.emergency_contact_person_relationship,
+        #         'emergency_contact_person_mobile_number': self.emergency_contact_person_mobile_number,
+        #         'emergency_contact_person_correspondence_address': self.emergency_contact_person_correspondence_address,
+        #         'emergency_details_any_allergies_specifically': self.emergency_details_any_allergies_specifically,
+        #         'nominee_name': self.nominee_name,
+        #         'nominee_relation': self.nominee_relation,
+        #         'nominee_id_proof': self.nominee_id_proof,
+        #         'previous_employment_company_designation': self.previous_employment_company_designation,
+        #         'previous_employment_company_tenure': self.previous_employment_company_tenure,
+        #
+        #     }
+        #     )
+        # activity_id = self.env['mail.activity'].search([('res_id', '=', self.id), ('user_id', '=', self.env.user.id), (
+        #     'activity_type_id', '=', self.env.ref('logic_employee_form.mail_activity_joining_form').id)])
+        # activity_id.action_feedback(feedback=f'Confirmed {self.env.user.name}')
+        # other_activity_ids = self.env['mail.activity'].search([('res_id', '=', self.id), (
+        #     'activity_type_id', '=', self.env.ref('logic_employee_form.mail_activity_joining_form').id)])
+        # other_activity_ids.unlink()
+        if self.mail_id:
+            user = self.env['res.users'].sudo().create({
                 'name': self.employee_name,
-                'job_title': self.designation,
-                'work_email': self.mail_id,
-                'mobile_phone': self.phone_number,
-                'home_address': self.address,
-                'birthday': self.date_of_birth,
-                'joining_date_cus': self.date_of_joining,
-                'bank_name': self.bank_name,
-                'bank_acc_number': self.bank_acc_number,
-                'branch_bank': self.branch_bank,
-                'ifsc_code': self.ifsc_code,
-                'department_id': self.department_id.id,
-                'micr_code': self.micr_code,
-                'name_as_per_bank': self.name_as_per_bank,
-                'aadhar_card_number': self.aadhar_card_number,
-                'name_as_per_aadhar': self.name_as_per_aadhar,
-                'pan_card_number': self.pan_card_number,
-                'name_as_per_pan': self.name_as_per_pan,
-                'pf_uan_number': self.pf_uan_number,
-                'esi_ip_number': self.esi_ip_number,
-                'blood_group': self.blood_group,
-                'spouse_birthdate': self.spouse_dob,
-                'spouse_complete_name': self.spouse_name,
-                'children_name': self.name_of_children,
-                'fam_ids': abc,
-                'upload_cv': self.upload_cv,
-                'aadhar_photo': self.aadhar_photo,
-                'pan_photo': self.pan_photo,
-                'bank_passbook': self.bank_passbook,
-                'photo': self.photo,
-                'private_email': self.mail_id,
-                'work_phone': self.office_phone,
-                'work_location': self.work_location,
-                'work_place': self.work_place,
-                'highest_education_college_name': self.highest_education_college_name,
-                'highest_education_full_time_or_partime': self.highest_education_full_time_or_partime,
-                'highest_education_degree': self.highest_education_degree,
-                'highest_education_qualification_specialization': self.highest_education_qualification_specialization,
-                'highest_education_qualification_passed_out_month_year': self.highest_education_qualification_passed_out_month_year,
-                'previous_employment_company_name': self.previous_employment_company_name,
-                'previous_employment_company_location': self.previous_employment_company_location,
-                'total_years_of_experience_before_joining_veranda': self.total_years_of_experience_before_joining_veranda,
-                'emergency_contact_person_name': self.emergency_contact_person_name,
-                'emergency_contact_person_relationship': self.emergency_contact_person_relationship,
-                'emergency_contact_person_mobile_number': self.emergency_contact_person_mobile_number,
-                'emergency_contact_person_correspondence_address': self.emergency_contact_person_correspondence_address,
-                'emergency_details_any_allergies_specifically': self.emergency_details_any_allergies_specifically,
-                'nominee_name': self.nominee_name,
-                'previous_employment_company_designation': self.previous_employment_company_designation,
-                'previous_employment_company_tenure': self.previous_employment_company_tenure,
-
-                'nominee_relation': self.nominee_relation,
-                'nominee_id_proof': self.nominee_id_proof,
-
-
-
-            }
-            )
+                'login': self.mail_id,
+            })
         else:
-            self.env['hr.employee'].create({
+            user = self.env['res.users'].sudo().create({
                 'name': self.employee_name,
-                'job_title': self.designation,
-                'work_email': self.mail_id,
-                'mobile_phone': self.phone_number,
-                'home_address': self.address,
-                'birthday': self.date_of_birth,
-                'joining_date_cus': self.date_of_joining,
-                'bank_name': self.bank_name,
-                'bank_acc_number': self.bank_acc_number,
-                'branch_bank': self.branch_bank,
-                'ifsc_code': self.ifsc_code,
-                'micr_code': self.micr_code,
-                'name_as_per_bank': self.name_as_per_bank,
-                'aadhar_card_number': self.aadhar_card_number,
-                'name_as_per_aadhar': self.name_as_per_aadhar,
-                'pan_card_number': self.pan_card_number,
-                'name_as_per_pan': self.name_as_per_pan,
-                'pf_uan_number': self.pf_uan_number,
-                'esi_ip_number': self.esi_ip_number,
-                'blood_group': self.blood_group,
-                'fam_ids': abc,
-                'spouse_complete_name': self.spouse_name,
-                'children_name': self.name_of_children,
-                'upload_cv': self.upload_cv,
-                'aadhar_photo': self.aadhar_photo,
-                'pan_photo': self.pan_photo,
-                'bank_passbook': self.bank_passbook,
-                'photo': self.photo,
-                'private_email': self.mail_id,
-                'work_phone': self.office_phone,
-                'work_location': self.work_location,
-                'work_place': self.work_place,
-                'highest_education_college_name': self.highest_education_college_name,
-                'highest_education_full_time_or_partime': self.highest_education_full_time_or_partime,
-                'highest_education_degree': self.highest_education_degree,
-                'highest_education_qualification_specialization': self.highest_education_qualification_specialization,
-                'highest_education_qualification_passed_out_month_year': self.highest_education_qualification_passed_out_month_year,
-                'previous_employment_company_name': self.previous_employment_company_name,
-                'previous_employment_company_location': self.previous_employment_company_location,
-                'total_years_of_experience_before_joining_veranda': self.total_years_of_experience_before_joining_veranda,
-                'emergency_contact_person_name': self.emergency_contact_person_name,
-                'emergency_contact_person_relationship': self.emergency_contact_person_relationship,
-                'emergency_contact_person_mobile_number': self.emergency_contact_person_mobile_number,
-                'emergency_contact_person_correspondence_address': self.emergency_contact_person_correspondence_address,
-                'emergency_details_any_allergies_specifically': self.emergency_details_any_allergies_specifically,
-                'nominee_name': self.nominee_name,
-                'nominee_relation': self.nominee_relation,
-                'nominee_id_proof': self.nominee_id_proof,
-                'previous_employment_company_designation': self.previous_employment_company_designation,
-                'previous_employment_company_tenure': self.previous_employment_company_tenure,
-
-            }
-            )
-        activity_id = self.env['mail.activity'].search([('res_id', '=', self.id), ('user_id', '=', self.env.user.id), (
-            'activity_type_id', '=', self.env.ref('logic_employee_form.mail_activity_joining_form').id)])
-        activity_id.action_feedback(feedback=f'Confirmed {self.env.user.name}')
-        other_activity_ids = self.env['mail.activity'].search([('res_id', '=', self.id), (
-            'activity_type_id', '=', self.env.ref('logic_employee_form.mail_activity_joining_form').id)])
-        other_activity_ids.unlink()
+                'login': self.employee_name + '@mail.com',
+            })
         self.state = 'done'
 
     def return_employee_request(self):

@@ -53,7 +53,6 @@ class LogicStaffInformation(models.Model):
     nominee_relation = fields.Char(string='Nominee Relation')
     nominee_id_proof = fields.Char(string='Nominee ID Proof Pan or Aadhar')
 
-
     # custody details
 
     custody_ids = fields.One2many('logic.staff.custody.information', 'custody_id', string='Custody')

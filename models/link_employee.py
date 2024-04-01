@@ -21,6 +21,26 @@ class LinkEmployeeJoiningForm(models.Model):
 
     def add_related_employee(self):
         if self.related_employee_id:
+            abc = []
+            for rec in self:
+                res_list = {
+                    'member_name': rec.related_employee_id.father_name,
+                    # 'relation_id': 'father',
+                    # 'classroom_id': self.class_room.name,
+                    'member_contact': rec.related_employee_id.father_number,
+                    'birth_date': rec.related_employee_id.father_dob,
+
+                }
+
+                res_list_mom = {
+                    'member_name': rec.related_employee_id.mother_name,
+                    # 'relation_id': 'mother',
+                    'member_contact': rec.related_employee_id.mother_number,
+                    'birth_date': rec.related_employee_id.mother_dob,
+
+                }
+                abc.append((0, 0, res_list))
+                abc.append((0, 0, res_list_mom))
             if self.related_employee_id.mail_id:
                 self.work_email = self.related_employee_id.mail_id
             if self.related_employee_id.phone_number:
@@ -121,6 +141,8 @@ class LinkEmployeeJoiningForm(models.Model):
 
             if self.related_employee_id.nominee_id_proof:
                 self.nominee_id_proof = self.related_employee_id.nominee_id_proof
+
+            self.fam_ids = abc
 
         else:
             raise UserError("Please Select Related Employee")
