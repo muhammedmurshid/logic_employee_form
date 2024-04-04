@@ -2,6 +2,7 @@ from odoo import http
 from odoo.http import request
 import io
 import base64
+import json
 
 
 class WebsiteForm(http.Controller):
@@ -20,6 +21,37 @@ class WebsiteForm(http.Controller):
 
     @http.route(['/employee_form/submit'], type='http', csrf=False, auth='public', website=True, method=['POST'])
     def handle_file_upload(self, **kw):
+        print(kw, 'kw')
+        childes = []
+        # childes.append(1)
+        # childes.append(2)
+
+        childes.append((0, 0, {
+            'name': kw.get('child_name'),
+            'age': kw.get('child_age'),
+
+        }))
+        childes.append((0, 0, {
+            'name': kw.get('child2_name'),
+            'age': kw.get('child2_age'),
+
+        }))
+        childes.append((0, 0, {
+            'name': kw.get('child3_name'),
+            'age': kw.get('child3_age'),
+
+        }))
+
+
+
+        # data = json.loads(kw['data_line_ids'])
+        # val = [(0, 0, line) for line in data]
+        # print(val, 'data')
+        # values = {
+        #     'name': kw['name'],
+        #     'data_line_ids': val,
+        # }
+        # print(values, 'val')
         file = kw.get('upload_cv')
         photo = kw.get('upload_phone')
         paan = kw.get('upload_paan')
@@ -76,7 +108,8 @@ class WebsiteForm(http.Controller):
                     'mother_dob': kw.get('mother_dob'),
                     'spouse_dob': kw.get('spouse_dob'),
                     'spouse_name': kw.get('spouse_name'),
-                    'name_of_children': kw.get('name_of_children'),
+                    'number_of_childes': kw.get('number_of_children'),
+                    'data_line_ids': childes,
                     'upload_cv': base64.b64encode(file.read()),
                     'photo': base64.b64encode(photo.read()),
                     'aadhar_photo': base64.b64encode(aadhar.read()),
@@ -100,7 +133,8 @@ class WebsiteForm(http.Controller):
                     'emergency_contact_person_relationship': kw.get('emergency_contact_person_relationship'),
                     'emergency_contact_person_mobile_number': kw.get('emergency_contact_person_mobile_number'),
                     'emergency_contact_person_email': kw.get('emergency_contact_person_mail'),
-                    'emergency_contact_person_correspondence_address': kw.get('emergency_contact_correspondence_address'),
+                    'emergency_contact_person_correspondence_address': kw.get(
+                        'emergency_contact_correspondence_address'),
                     'emergency_details_any_allergies_specifically': kw.get('emergency_details_any_allergies'),
                     'nominee_name': kw.get('nominee_name'),
                     'nominee_relation': kw.get('nominee_relationship'),
@@ -175,7 +209,7 @@ class WebsiteForm(http.Controller):
             print('ok')
 
         return request.render("logic_employee_form.logic_employee_form_success")
-            # Retrieve the file data
+        # Retrieve the file data
 
         # if kw.get('marital_stats') == 'married':
         #     field_value = kw.get('spouse_dob')

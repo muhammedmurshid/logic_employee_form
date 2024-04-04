@@ -21,11 +21,14 @@ class LinkEmployeeJoiningForm(models.Model):
 
     def add_related_employee(self):
         if self.related_employee_id:
+            child_rel = self.env['hr.employee.relation'].sudo().search([('name', '=', 'Children')], limit=1)
+            mom_rel = self.env['hr.employee.relation'].sudo().search([('name', '=', 'Mother')], limit=1)
+            dad_rel = self.env['hr.employee.relation'].sudo().search([('name', '=', 'Father')], limit=1)
             abc = []
             for rec in self:
                 res_list = {
                     'member_name': rec.related_employee_id.father_name,
-                    # 'relation_id': 'father',
+                    'relation_id': dad_rel.id,
                     # 'classroom_id': self.class_room.name,
                     'member_contact': rec.related_employee_id.father_number,
                     'birth_date': rec.related_employee_id.father_dob,
@@ -34,6 +37,7 @@ class LinkEmployeeJoiningForm(models.Model):
 
                 res_list_mom = {
                     'member_name': rec.related_employee_id.mother_name,
+                    'relation_id': mom_rel.id,
                     # 'relation_id': 'mother',
                     'member_contact': rec.related_employee_id.mother_number,
                     'birth_date': rec.related_employee_id.mother_dob,
@@ -41,6 +45,13 @@ class LinkEmployeeJoiningForm(models.Model):
                 }
                 abc.append((0, 0, res_list))
                 abc.append((0, 0, res_list_mom))
+                for child in rec.related_employee_id.data_line_ids:
+                    res_child = {
+                        'member_name': child.name,
+                        'relation_id': child_rel.id,
+
+                    }
+                    abc.append((0,0, res_child))
             if self.related_employee_id.mail_id:
                 self.work_email = self.related_employee_id.mail_id
             if self.related_employee_id.phone_number:

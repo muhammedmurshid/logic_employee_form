@@ -8,3 +8,4 @@ access_base_form,access_emp,model_one_many,,0,1,1,1
 access_user,access_emp,model_employee_module_form,,0,1,1,1
 
 access_user_custody_information,access_emp,model_logic_staff_custody_information,,1,1,1,1
+access_data_line,access_emp,model_data_line,,1,1,1,1

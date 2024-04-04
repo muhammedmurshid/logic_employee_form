@@ -38,7 +38,8 @@ class EmployeeModuleForm(models.Model):
     mother_dob = fields.Date(string='Mother Date Of Birth')
     father_dob = fields.Date(string='Father Date Of Birth')
     spouse_dob = fields.Date(string='Spouse Date Of Birth')
-    marital_stats = fields.Char(string='Marital Status')
+    number_of_childes = fields.Char(string='Number Of Childes')
+    marital_stats = fields.Selection([('married', 'Married'), ('single', 'Unmarried')], string='Marital Status')
     address = fields.Text(string='Address')
     fath_rel = fields.Char(string='Father Relation')
     moth_rel = fields.Char(string='Mother Relation')
@@ -85,6 +86,7 @@ class EmployeeModuleForm(models.Model):
     nominee_relation = fields.Char(string='Nominee Relation')
     nominee_id_proof = fields.Char(string='Nominee ID Proof Pan or Aadhar')
     gender = fields.Selection([('male', 'Male'), ('female', 'Female'), ('other', 'Other')], string='Gender')
+    data_line_ids = fields.One2many('data.line', 'form_id', 'Data Lines')
 
     def confirm_employee_request(self):
         print("hr_approval")
@@ -278,3 +280,11 @@ class OneMany(models.Model):
 
     name = fields.Char(string='Name')
     name_id = fields.Many2one('employee.module.form', string='Name')
+
+class DataLine(models.Model):
+    _name = 'data.line'
+    _description = 'Data Lines'
+
+    name = fields.Char('Name')
+    age = fields.Float('Age')
+    form_id = fields.Many2one('employee.module.form', 'Form Id', ondelete='cascade')

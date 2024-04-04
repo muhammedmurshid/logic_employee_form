@@ -59,14 +59,26 @@
                             <field name="mother_name"/>
                             <field name="mother_number"/>
                             <field name="mother_dob"/>
+                            <field name="marital_stats"/>
+                            <field name="spouse_name" attrs="{'invisible': [('marital_stats', '!=', 'married')] }"/>
+                            <field name="spouse_dob" attrs="{'invisible': [('marital_stats', '!=', 'married')] }"/>
+                            <field name="number_of_childes" attrs="{'invisible': [('marital_stats', '!=', 'married')] }"/>
+                            <field name="data_line_ids" string="Childrens" attrs="{'invisible': [('marital_stats', '!=', 'married')] }">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="age"/>
+                                </tree>
+                            </field>
                             <field name="work_location"/>
                             <field name="work_place"/>
+
+
+                        </group>
+                        <group>
                             <field name="highest_education_college_name"/>
                             <field name="highest_education_full_time_or_partime"/>
                             <field name="highest_education_degree"/>
                             <field name="highest_education_qualification_specialization"/>
-                        </group>
-                        <group>
                             <field name="highest_education_qualification_passed_out_month_year"/>
                             <field name="previous_employment_company_name"/>
                             <field name="previous_employment_company_location"/>
