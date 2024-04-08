@@ -288,114 +288,114 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                                 data-type="char" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class="col-form-label col-sm-auto s_website_form_label"
-                                                           style="width: 200px">
-                                                        <span class="s_website_form_label_content">
-                                                            Father Name:
-                                                        </span>
-                                                    </label>
-                                                    <div class="col-sm">
-                                                        <input id="father" type="char"
-                                                               class="form-control s_website_form_input"
-                                                               name="father"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                                 data-type="char" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class="col-form-label col-sm-auto s_website_form_label"
-                                                           style="width: 200px">
-                                                        <span class="s_website_form_label_content">
-                                                            Father Number:
-                                                        </span>
-                                                    </label>
-                                                    <div class="col-sm">
-                                                        <input id="father_number" type="char"
-                                                               class="form-control s_website_form_input"
-                                                               name="father_number"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                                 data-type="char" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class="col-form-label col-sm-auto s_website_form_label"
-                                                           style="width: 200px">
-                                                        <span class="s_website_form_label_content">
-                                                            Father DOB:
-                                                        </span>
-                                                    </label>
-                                                    <div class="col-sm">
-                                                        <input id="father_dob" type="date"
-                                                               class="form-control s_website_form_input"
-                                                               name="father_dob" required="required"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                                 data-type="char" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class="col-form-label col-sm-auto s_website_form_label"
-                                                           style="width: 200px">
-                                                        <span class="s_website_form_label_content">
-                                                            Mother Name:
-                                                        </span>
-                                                    </label>
-                                                    <div class="col-sm">
-                                                        <input id="mother" type="char"
-                                                               class="form-control s_website_form_input"
-                                                               name="mother"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                                 data-type="char" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class="col-form-label col-sm-auto s_website_form_label"
-                                                           style="width: 200px">
-                                                        <span class="s_website_form_label_content">
-                                                            Mother Number:
-                                                        </span>
-                                                    </label>
-                                                    <div class="col-sm">
-                                                        <input id="mother_number" type="char"
-                                                               class="form-control s_website_form_input"
-                                                               name="mother_number"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                                 data-type="char" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class="col-form-label col-sm-auto s_website_form_label"
-                                                           style="width: 200px">
-                                                        <span class="s_website_form_label_content">
-                                                            Mother DOB:
-                                                        </span>
-                                                    </label>
-                                                    <div class="col-sm">
-                                                        <input id="mother_dob" type="date"
-                                                               class="form-control s_website_form_input"
-                                                               name="mother_dob" required="required"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+<!--                                        <div class="row">-->
+<!--                                            <div class="form-group col-12 s_website_form_field s_website_form_required"-->
+<!--                                                 data-type="char" data-name="Field">-->
+<!--                                                <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                                                    <label class="col-form-label col-sm-auto s_website_form_label"-->
+<!--                                                           style="width: 200px">-->
+<!--                                                        <span class="s_website_form_label_content">-->
+<!--                                                            Father Name:-->
+<!--                                                        </span>-->
+<!--                                                    </label>-->
+<!--                                                    <div class="col-sm">-->
+<!--                                                        <input id="father" type="char"-->
+<!--                                                               class="form-control s_website_form_input"-->
+<!--                                                               name="father"/>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="form-group col-12 s_website_form_field s_website_form_required"-->
+<!--                                                 data-type="char" data-name="Field">-->
+<!--                                                <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                                                    <label class="col-form-label col-sm-auto s_website_form_label"-->
+<!--                                                           style="width: 200px">-->
+<!--                                                        <span class="s_website_form_label_content">-->
+<!--                                                            Father Number:-->
+<!--                                                        </span>-->
+<!--                                                    </label>-->
+<!--                                                    <div class="col-sm">-->
+<!--                                                        <input id="father_number" type="char"-->
+<!--                                                               class="form-control s_website_form_input"-->
+<!--                                                               name="father_number"/>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="form-group col-12 s_website_form_field s_website_form_required"-->
+<!--                                                 data-type="char" data-name="Field">-->
+<!--                                                <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                                                    <label class="col-form-label col-sm-auto s_website_form_label"-->
+<!--                                                           style="width: 200px">-->
+<!--                                                        <span class="s_website_form_label_content">-->
+<!--                                                            Father DOB:-->
+<!--                                                        </span>-->
+<!--                                                    </label>-->
+<!--                                                    <div class="col-sm">-->
+<!--                                                        <input id="father_dob" type="date"-->
+<!--                                                               class="form-control s_website_form_input"-->
+<!--                                                               name="father_dob" required="required"/>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="form-group col-12 s_website_form_field s_website_form_required"-->
+<!--                                                 data-type="char" data-name="Field">-->
+<!--                                                <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                                                    <label class="col-form-label col-sm-auto s_website_form_label"-->
+<!--                                                           style="width: 200px">-->
+<!--                                                        <span class="s_website_form_label_content">-->
+<!--                                                            Mother Name:-->
+<!--                                                        </span>-->
+<!--                                                    </label>-->
+<!--                                                    <div class="col-sm">-->
+<!--                                                        <input id="mother" type="char"-->
+<!--                                                               class="form-control s_website_form_input"-->
+<!--                                                               name="mother"/>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="form-group col-12 s_website_form_field s_website_form_required"-->
+<!--                                                 data-type="char" data-name="Field">-->
+<!--                                                <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                                                    <label class="col-form-label col-sm-auto s_website_form_label"-->
+<!--                                                           style="width: 200px">-->
+<!--                                                        <span class="s_website_form_label_content">-->
+<!--                                                            Mother Number:-->
+<!--                                                        </span>-->
+<!--                                                    </label>-->
+<!--                                                    <div class="col-sm">-->
+<!--                                                        <input id="mother_number" type="char"-->
+<!--                                                               class="form-control s_website_form_input"-->
+<!--                                                               name="mother_number"/>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="form-group col-12 s_website_form_field s_website_form_required"-->
+<!--                                                 data-type="char" data-name="Field">-->
+<!--                                                <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                                                    <label class="col-form-label col-sm-auto s_website_form_label"-->
+<!--                                                           style="width: 200px">-->
+<!--                                                        <span class="s_website_form_label_content">-->
+<!--                                                            Mother DOB:-->
+<!--                                                        </span>-->
+<!--                                                    </label>-->
+<!--                                                    <div class="col-sm">-->
+<!--                                                        <input id="mother_dob" type="date"-->
+<!--                                                               class="form-control s_website_form_input"-->
+<!--                                                               name="mother_dob" required="required"/>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
                                         <div class="row">
                                             <div class="form-group col-12 s_website_form_field s_website_form_required"
                                                  data-type="char" data-name="Field">
@@ -473,112 +473,6 @@
                                                                class="form-control s_website_form_input"
                                                                name="number_of_children" placeholder="If Married"/>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class='row ml-1'
-                                                 style="width:99%;">
-                                                <div class="form-group col-12 show_total_project">
-                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                        <table class="table table-bordered mt-3 total_project_costs">
-                                                            <thead>
-                                                                <tr>
-                                                                    <td>
-                                                                        <strong>
-                                                                            Name *
-                                                                        </strong>
-                                                                    </td>
-                                                                    <td>
-                                                                        <strong>Age *
-                                                                        </strong>
-                                                                    </td>
-
-                                                                </tr>
-                                                            </thead>
-                                                            <div class="collapse">
-                                                                <tbody>
-                                                                    <tr class="project_cost_line">
-                                                                        <td>
-                                                                            <input required="True"
-                                                                                   type="text"
-                                                                                   class="form-control"
-                                                                                   name="child2_name"
-                                                                                   placeholder="Children Name"
-                                                                                   id="child2_name"/>
-                                                                        </td>
-                                                                        <td>
-                                                                            <div class="d-flex">
-
-
-                                                                                <input required="True"
-                                                                                       placeholder="Children Age"
-                                                                                       type="number"
-                                                                                       class="form-control total_cost"
-                                                                                       name="child2_age"
-                                                                                       id="child2_age"/>
-                                                                            </div>
-
-                                                                        </td>
-
-                                                                    </tr>
-
-                                                                    <tr class="add_extra_project">
-                                                                        <td>
-                                                                            <input type="text"
-                                                                                   class="form-control"
-                                                                                   name="child_name"
-                                                                                   placeholder="Children Name"
-                                                                                   id="child_name"/>
-                                                                        </td>
-                                                                        <td>
-                                                                            <div class="d-flex">
-
-                                                                                <input placeholder="Age"
-                                                                                       type="number"
-                                                                                       class="form-control total_cost"
-                                                                                       name="child_age"
-                                                                                       id="child_age"/>
-                                                                                <!--                                                                	<span style="display: block;" class="mt-2">£</span>-->
-                                                                            </div>
-
-
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <input type="text"
-                                                                                   class="form-control"
-                                                                                   name="child3_name"
-                                                                                   placeholder="Children Name"
-                                                                                   id="child3_name"/>
-                                                                        </td>
-                                                                        <td>
-                                                                            <div class="d-flex">
-
-                                                                                <input placeholder="Age"
-                                                                                       type="number"
-                                                                                       class="form-control total_cost"
-                                                                                       name="child3_age"
-                                                                                       id="child3_age"/>
-                                                                                <!--                                                                	<span style="display: block;" class="mt-2">£</span>-->
-                                                                            </div>
-
-
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </div>
-                                                        </table>
-                                                    </div>
-                                                    <!--                                                    <textarea-->
-                                                    <!--                                                              name="data_line_ids">-->
-                                                    <!--                                                    </textarea>-->
-                                                    <!--                                                    <button type="button"-->
-                                                    <!--                                                            class="btn btn-info add_total_project button-color"-->
-                                                    <!--                                                            style="float: right; margin-right: -15px;">-->
-                                                    <!--                                                        <i class="fa fa-plus"/>-->
-                                                    <!--                                                    </button>-->
                                                 </div>
                                             </div>
                                         </div>
@@ -1326,6 +1220,286 @@
                                         </div>
 
 
+                                    </div>
+                                    <div class="form-group">
+                                        <div class='row ml-1'
+                                             style="width:99%;">
+                                            <div class="form-group col-12 show_total_project">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <table class="table table-bordered mt-3 total_project_costs">
+                                                        <thead>
+                                                            <tr>
+                                                                <td>
+                                                                    <strong>
+                                                                        Name
+                                                                    </strong>
+                                                                </td>
+                                                                <td>
+                                                                    <strong>Relation
+                                                                    </strong>
+                                                                </td>
+                                                                <td>
+                                                                    <strong>Contact Number
+                                                                    </strong>
+                                                                </td>
+                                                                <td>
+                                                                    <strong>DOB
+                                                                    </strong>
+                                                                </td>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <div class="collapse">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input required="True"
+                                                                               type="text"
+                                                                               class="form-control"
+                                                                               name="father_name"
+                                                                               placeholder="Father Name"
+                                                                               id="father_name"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="d-flex">
+                                                                            <select name="father_relation"
+                                                                                    t-attf-class="form-control s_website_form_input"
+                                                                                    required="1">
+                                                                                <t t-foreach="relation or []"
+                                                                                   t-as="relation">
+                                                                                    <option t-att-value="relation.id">
+                                                                                        <t t-esc="relation.name"/>
+                                                                                    </option>
+                                                                                </t>
+                                                                            </select>
+
+
+<!--                                                                            <input required="True"-->
+<!--                                                                                   placeholder="Father Relation"-->
+<!--                                                                                   type="number"-->
+<!--                                                                                   class="form-control total_cost"-->
+<!--                                                                                   name="child2_age"-->
+<!--                                                                                   id="child2_age"/>-->
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <input required="True"
+                                                                               type="number"
+                                                                               class="form-control"
+                                                                               name="father_number"
+                                                                               placeholder="Father Number"
+                                                                               id="father_number"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input required="True"
+                                                                               type="date"
+                                                                               class="form-control"
+                                                                               name="father_dob"
+                                                                               placeholder="Father DOB"
+                                                                               id="father_dob"/>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input required="True"
+                                                                               type="text"
+                                                                               class="form-control"
+                                                                               name="mother_name"
+                                                                               placeholder="Mother Name"
+                                                                               id="mother_name"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="d-flex">
+                                                                            <select name="mother_relation"
+                                                                                    t-attf-class="form-control s_website_form_input"
+                                                                                    required="1">
+                                                                                <t t-foreach="relation2 or []"
+                                                                                   t-as="relation">
+                                                                                    <option t-att-value="relation.id">
+                                                                                        <t t-esc="relation.name"/>
+                                                                                    </option>
+                                                                                </t>
+                                                                            </select>
+
+
+<!--                                                                            <input required="True"-->
+<!--                                                                                   placeholder="Father Relation"-->
+<!--                                                                                   type="number"-->
+<!--                                                                                   class="form-control total_cost"-->
+<!--                                                                                   name="child2_age"-->
+<!--                                                                                   id="child2_age"/>-->
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <input required="True"
+                                                                               type="number"
+                                                                               class="form-control"
+                                                                               name="mother_number"
+                                                                               placeholder="Mother Number"
+                                                                               id="mother_number"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input required="True"
+                                                                               type="date"
+                                                                               class="form-control"
+                                                                               name="mother_dob"
+                                                                               placeholder="Mother DOB"
+                                                                               id="mother_dob"/>
+                                                                    </td>
+
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>
+                                                                        <input
+                                                                               type="text"
+                                                                               class="form-control"
+                                                                               name="child_name"
+                                                                               placeholder="Child Name"
+                                                                               id="child_name"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="d-flex">
+                                                                            <select name="child_relation"
+                                                                                    t-attf-class="form-control s_website_form_input"
+                                                                                    required="1">
+                                                                                <t t-foreach="relation3 or []"
+                                                                                   t-as="relation">
+                                                                                    <option t-att-value="relation.id">
+                                                                                        <t t-esc="relation.name"/>
+                                                                                    </option>
+                                                                                </t>
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <input
+                                                                               type="number"
+                                                                               class="form-control"
+                                                                               name="child_number"
+
+                                                                               id="child_number"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input
+                                                                               type="date"
+                                                                               class="form-control"
+                                                                               name="child_dob"
+                                                                               placeholder="Child DOB"
+                                                                               id="child_dob"/>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input
+                                                                               type="text"
+                                                                               class="form-control"
+                                                                               name="child2_name"
+                                                                               placeholder="Child Name"
+                                                                               id="child2_name"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="d-flex">
+                                                                            <select name="child2_relation"
+                                                                                    t-attf-class="form-control s_website_form_input"
+                                                                                    required="1">
+                                                                                <t t-foreach="relation4 or []"
+                                                                                   t-as="relation">
+                                                                                    <option t-att-value="relation.id">
+                                                                                        <t t-esc="relation.name"/>
+                                                                                    </option>
+                                                                                </t>
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <input
+                                                                               type="number"
+                                                                               class="form-control"
+                                                                               name="child2_number"
+
+                                                                               id="child2_number"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input
+                                                                               type="date"
+                                                                               class="form-control"
+                                                                               name="child2_dob"
+                                                                               placeholder="Child DOB"
+                                                                               id="child2_dob"/>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input
+                                                                               type="text"
+                                                                               class="form-control"
+                                                                               name="child3_name"
+                                                                               placeholder="Child Name"
+                                                                               id="child3_name"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="d-flex">
+                                                                            <select name="child3_relation"
+                                                                                    t-attf-class="form-control s_website_form_input"
+                                                                                    required="1">
+                                                                                <t t-foreach="relation5 or []"
+                                                                                   t-as="relation">
+                                                                                    <option t-att-value="relation.id">
+                                                                                        <t t-esc="relation.name"/>
+                                                                                    </option>
+                                                                                </t>
+                                                                            </select>
+
+
+<!--                                                                            <input required="True"-->
+<!--                                                                                   placeholder="Father Relation"-->
+<!--                                                                                   type="number"-->
+<!--                                                                                   class="form-control total_cost"-->
+<!--                                                                                   name="child2_age"-->
+<!--                                                                                   id="child2_age"/>-->
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <input
+                                                                               type="number"
+                                                                               class="form-control"
+                                                                               name="child3_number"
+
+                                                                               id="child3_number"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input
+                                                                               type="date"
+                                                                               class="form-control"
+                                                                               name="child3_dob"
+                                                                               placeholder="Child DOB"
+                                                                               id="child3_dob"/>
+                                                                    </td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </div>
+                                                    </table>
+                                                </div>
+                                                <!--                                                    <textarea-->
+                                                <!--                                                              name="data_line_ids">-->
+                                                <!--                                                    </textarea>-->
+                                                <!--                                                    <button type="button"-->
+                                                <!--                                                            class="btn btn-info add_total_project button-color"-->
+                                                <!--                                                            style="float: right; margin-right: -15px;">-->
+                                                <!--                                                        <i class="fa fa-plus"/>-->
+                                                <!--                                                    </button>-->
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

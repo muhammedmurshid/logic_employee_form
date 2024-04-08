@@ -274,6 +274,29 @@ class EmployeeModuleForm(models.Model):
 
     name_ids = fields.One2many('one.many', 'name_id', string='Name')
 
+    def action_bulk_add_family_details(self):
+        selected_records = self.env['employee.module.form'].browse(self._context.get('active_ids', []))
+        selected_record_ids = selected_records.ids
+        father_rel = self.env['hr.employee.relation'].search([('name', '=', 'Father')])
+        mother_rel = self.env['hr.employee.relation'].search([('name', '=', 'Mother')])
+        for i in selected_records:
+            if i.father_name:
+                i.data_line_ids = [(0, 0, {
+                    'name': i.father_name,
+                    'mobile_number': i.father_number,
+                    'relation': father_rel.id,
+                    'dob': i.father_dob,
+                })]
+            if i.mother_name:
+                i.data_line_ids = [(0, 0, {
+                    'name': i.mother_name,
+                    'mobile_number': i.mother_number,
+                    'dob': i.mother_dob,
+                    'relation': mother_rel.id,
+                })]
+
+        print(selected_record_ids)
+
 
 class OneMany(models.Model):
     _name = 'one.many'
@@ -286,5 +309,7 @@ class DataLine(models.Model):
     _description = 'Data Lines'
 
     name = fields.Char('Name')
-    age = fields.Float('Age')
+    relation = fields.Many2one('hr.employee.relation', 'Relation')
+    mobile_number = fields.Char('Mobile Number', widgets='phone')
+    dob = fields.Date('Date of Birth')
     form_id = fields.Many2one('employee.module.form', 'Form Id', ondelete='cascade')

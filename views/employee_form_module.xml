@@ -62,13 +62,9 @@
                             <field name="marital_stats"/>
                             <field name="spouse_name" attrs="{'invisible': [('marital_stats', '!=', 'married')] }"/>
                             <field name="spouse_dob" attrs="{'invisible': [('marital_stats', '!=', 'married')] }"/>
-                            <field name="number_of_childes" attrs="{'invisible': [('marital_stats', '!=', 'married')] }"/>
-                            <field name="data_line_ids" string="Childrens" attrs="{'invisible': [('marital_stats', '!=', 'married')] }">
-                                <tree editable="bottom">
-                                    <field name="name"/>
-                                    <field name="age"/>
-                                </tree>
-                            </field>
+                            <field name="number_of_childes"
+                                   attrs="{'invisible': [('marital_stats', '!=', 'married')] }"/>
+
                             <field name="work_location"/>
                             <field name="work_place"/>
 
@@ -96,10 +92,18 @@
                             <field name="nominee_id_proof"/>
 
                         </group>
-
-
                     </group>
                     <notebook>
+                        <page string="Family Details">
+                            <field name="data_line_ids" string="Family Details">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="relation"/>
+                                    <field name="mobile_number"/>
+                                    <field name="dob"/>
+                                </tree>
+                            </field>
+                        </page>
                         <page string="Bank Details">
                             <group>
                                 <group>

@@ -11,11 +11,22 @@ class WebsiteForm(http.Controller):
         partners = request.env['employee.module.form'].sudo().search([])
         branch = request.env['logic.base.branches'].sudo().search([])
         department = request.env['hr.department'].sudo().search([])
+        relation = request.env['hr.employee.relation'].sudo().search([('name', '=', 'Father')])
+        relation2 = request.env['hr.employee.relation'].sudo().search([('name', '=', 'Mother')])
+        relation3 = request.env['hr.employee.relation'].sudo().search([])
+        relation4 = request.env['hr.employee.relation'].sudo().search([])
+        relation5 = request.env['hr.employee.relation'].sudo().search([])
         values = {}
         values.update({
             'partners': partners,
             'branch': branch,
-            'department': department
+            'department': department,
+            'relation': relation,
+            'relation2': relation2,
+            'relation3': relation3,
+            'relation4': relation4,
+            'relation5': relation5
+
         })
         return request.render("logic_employee_form.employee_joining_form", values)
 
@@ -25,20 +36,40 @@ class WebsiteForm(http.Controller):
         childes = []
         # childes.append(1)
         # childes.append(2)
+        childes.append((0, 0, {
+            'name': kw.get('father_name'),
+            'dob': kw.get('father_dob'),
+            'mobile_number': kw.get('father_number'),
+            'relation': kw.get('father_relation'),
+
+        }))
+        childes.append((0, 0, {
+            'name': kw.get('mother_name'),
+            'dob': kw.get('mother_dob'),
+            'mobile_number': kw.get('mother_number'),
+            'relation': kw.get('mother_relation'),
+
+        }))
 
         childes.append((0, 0, {
             'name': kw.get('child_name'),
-            'age': kw.get('child_age'),
+            'dob': kw.get('child_dob'),
+            'mobile_number': kw.get('child_number'),
+            'relation': kw.get('child_relation'),
 
         }))
         childes.append((0, 0, {
             'name': kw.get('child2_name'),
-            'age': kw.get('child2_age'),
+            'dob': kw.get('child2_dob'),
+            'mobile_number': kw.get('child2_number'),
+            'relation': kw.get('child2_relation'),
 
         }))
         childes.append((0, 0, {
             'name': kw.get('child3_name'),
-            'age': kw.get('child3_age'),
+            'dob': kw.get('child3_dob'),
+            'mobile_number': kw.get('child3_number'),
+            'relation': kw.get('child3_relation'),
 
         }))
 
@@ -100,12 +131,12 @@ class WebsiteForm(http.Controller):
                     'blood_group': kw.get('blood_group'),
                     'pf_uan_number': kw.get('pf_number'),
                     'esi_ip_number': kw.get('esi_number'),
-                    'father_name': kw.get('father'),
-                    'father_number': kw.get('father_number'),
-                    'mother_number': kw.get('mother_number'),
-                    'mother_name': kw.get('mother'),
-                    'father_dob': kw.get('father_dob'),
-                    'mother_dob': kw.get('mother_dob'),
+                    # 'father_name': kw.get('father'),
+                    # 'father_number': kw.get('father_number'),
+                    # 'mother_number': kw.get('mother_number'),
+                    # 'mother_name': kw.get('mother'),
+                    # 'father_dob': kw.get('father_dob'),
+                    # 'mother_dob': kw.get('mother_dob'),
                     'spouse_dob': kw.get('spouse_dob'),
                     'spouse_name': kw.get('spouse_name'),
                     'number_of_childes': kw.get('number_of_children'),
@@ -169,13 +200,13 @@ class WebsiteForm(http.Controller):
                 'blood_group': kw.get('blood_group'),
                 'pf_uan_number': kw.get('pf_number'),
                 'esi_ip_number': kw.get('esi_number'),
-                'father_name': kw.get('father'),
-                'mother_name': kw.get('mother'),
-                'father_number': kw.get('father_number'),
-                'mother_number': kw.get('mother_number'),
+                # 'father_name': kw.get('father'),
+                # 'mother_name': kw.get('mother'),
+                # 'father_number': kw.get('father_number'),
+                # 'mother_number': kw.get('mother_number'),
 
                 'father_dob': kw.get('father_dob'),
-                'mother_dob': kw.get('mother_dob'),
+                # 'mother_dob': kw.get('mother_dob'),
                 'name_of_children': kw.get('name_of_children'),
                 'upload_cv': base64.b64encode(file.read()),
                 'photo': base64.b64encode(photo.read()),
