@@ -18,5 +18,5 @@
             <field name="doall" eval="False"/>
         </record>
     </data>
-   
+
 </odoo>
