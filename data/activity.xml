@@ -18,12 +18,5 @@
             <field name="doall" eval="False"/>
         </record>
     </data>
-    <record id="action_add_family_details" model="ir.actions.server">
-            <field name="name">Add Family Details</field>
-            <field name="model_id" ref="logic_employee_form.model_employee_module_form"/>
-            <field name="binding_model_id" ref="logic_employee_form.model_employee_module_form"/>
-            <field name="binding_view_types">list</field>
-            <field name="state">code</field>
-            <field name="code">action = records.action_bulk_add_family_details()</field>
-        </record>
+   
 </odoo>

@@ -53,12 +53,12 @@
                             <field name="address"/>
                             <field name="date_of_birth"/>
                             <field name="date_of_joining"/>
-                            <field name="father_name"/>
-                            <field name="father_number"/>
-                            <field name="father_dob"/>
-                            <field name="mother_name"/>
-                            <field name="mother_number"/>
-                            <field name="mother_dob"/>
+<!--                            <field name="father_name"/>-->
+<!--                            <field name="father_number"/>-->
+<!--                            <field name="father_dob"/>-->
+<!--                            <field name="mother_name"/>-->
+<!--                            <field name="mother_number"/>-->
+<!--                            <field name="mother_dob"/>-->
                             <field name="marital_stats"/>
                             <field name="spouse_name" attrs="{'invisible': [('marital_stats', '!=', 'married')] }"/>
                             <field name="spouse_dob" attrs="{'invisible': [('marital_stats', '!=', 'married')] }"/>

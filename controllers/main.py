@@ -3,6 +3,8 @@ from odoo.http import request
 import io
 import base64
 import json
+from datetime import datetime
+
 
 
 class WebsiteForm(http.Controller):
@@ -33,6 +35,11 @@ class WebsiteForm(http.Controller):
     @http.route(['/employee_form/submit'], type='http', csrf=False, auth='public', website=True, method=['POST'])
     def handle_file_upload(self, **kw):
         print(kw, 'kw')
+        print(kw.get('father_dob'), 'dad_dob')
+        print(kw.get('joining'), 'join')
+        # dad_dob_date = kw.get('father_dob')
+        # date_object = datetime.strptime(dad_dob_date, '%Y/%m/%d')
+        # print(date_object, 'date_object')
         childes = []
         # childes.append(1)
         # childes.append(2)
@@ -50,28 +57,33 @@ class WebsiteForm(http.Controller):
             'relation': kw.get('mother_relation'),
 
         }))
+        if kw.get('child_dob'):
 
-        childes.append((0, 0, {
-            'name': kw.get('child_name'),
-            'dob': kw.get('child_dob'),
-            'mobile_number': kw.get('child_number'),
-            'relation': kw.get('child_relation'),
+            childes.append((0, 0, {
+                'name': kw.get('child_name'),
+                'dob': kw.get('child_dob'),
+                'mobile_number': kw.get('child_number'),
+                'relation': kw.get('child_relation'),
 
-        }))
-        childes.append((0, 0, {
-            'name': kw.get('child2_name'),
-            'dob': kw.get('child2_dob'),
-            'mobile_number': kw.get('child2_number'),
-            'relation': kw.get('child2_relation'),
+            }))
+        if kw.get('child2_dob'):
+            childes.append((0, 0, {
+                'name': kw.get('child2_name'),
+                'dob': kw.get('child2_dob'),
+                'mobile_number': kw.get('child2_number'),
+                'relation': kw.get('child2_relation'),
 
-        }))
-        childes.append((0, 0, {
-            'name': kw.get('child3_name'),
-            'dob': kw.get('child3_dob'),
-            'mobile_number': kw.get('child3_number'),
-            'relation': kw.get('child3_relation'),
+            }))
+        if kw.get('child3_dob'):
+            childes.append((0, 0, {
+                'name': kw.get('child3_name'),
+                'dob': kw.get('child3_dob'),
+                'mobile_number': kw.get('child3_number'),
+                'relation': kw.get('child3_relation'),
 
-        }))
+            }))
+
+        print(childes, 'childes')
 
 
 
@@ -131,6 +143,7 @@ class WebsiteForm(http.Controller):
                     'blood_group': kw.get('blood_group'),
                     'pf_uan_number': kw.get('pf_number'),
                     'esi_ip_number': kw.get('esi_number'),
+                    ''
                     # 'father_name': kw.get('father'),
                     # 'father_number': kw.get('father_number'),
                     # 'mother_number': kw.get('mother_number'),
@@ -190,7 +203,7 @@ class WebsiteForm(http.Controller):
                 'ifsc_code': kw.get('ifsc'),
                 'micr_code': kw.get('micr'),
                 'branch_id': kw.get('branch'),
-
+                'data_line_ids': childes,
                 'name_as_per_bank': kw.get('name_as_per_bank'),
                 'aadhar_card_number': kw.get('aadhar_number'),
                 'name_as_per_aadhar': kw.get('name_as_per_aadhar'),
@@ -205,7 +218,7 @@ class WebsiteForm(http.Controller):
                 # 'father_number': kw.get('father_number'),
                 # 'mother_number': kw.get('mother_number'),
 
-                'father_dob': kw.get('father_dob'),
+                # 'father_dob': kw.get('father_dob'),
                 # 'mother_dob': kw.get('mother_dob'),
                 'name_of_children': kw.get('name_of_children'),
                 'upload_cv': base64.b64encode(file.read()),
