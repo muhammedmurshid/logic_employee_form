@@ -13,4 +13,8 @@
         <field name="name">Technical Officer</field>
         <field name="category_id" ref="module_joining_form"/>
     </record>
+    <record id="joining_form_for_digital_team" model="res.groups">
+        <field name="name">Digital Team</field>
+        <field name="category_id" ref="module_joining_form"/>
+    </record>
 </odoo>
